@@ -481,5 +481,4 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
   <img src="https://contributors-img.firebaseapp.com/image?repo=rednafi/py-sanity" />
 </a>
 
-Made with [contributors-img](https://contributors-img.firebaseapp.com).
 
