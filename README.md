@@ -172,6 +172,26 @@
     from z_mod import bar, baz
     ```
 
+* Use absolute imports in your production code. Relative imports can be messy, particularly for shared projects where directory structure is likely to change. Consider this directory structure:
+
+    ```bash
+    └── project
+    └── package1
+       ├── module1.py
+       └── module2.py
+
+    ```
+    ```python
+    # package1/module1
+    
+    # bad
+    from .module2 import func
+
+    # good
+    from package1.module2 import func
+    ```
+
+
 ## Whitespaces
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
 
@@ -349,7 +369,7 @@ or what data type an object is. Use description_object instead of object_descrip
    ```python
     # __init__.py
     # demo of a global logger that can be called and used anywhere in your package
-    
+
     import logging
 
     logging.getLogger(__name__)
