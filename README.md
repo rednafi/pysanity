@@ -347,7 +347,9 @@ or what data type an object is. Use description_object instead of object_descrip
 * Define a basic logging class
 
    ```python
-    # demo of a logger in __init_.py
+    # __init__.py
+    # demo of a global logger that can be called and used anywhere in your package
+    
     import logging
 
     logging.getLogger(__name__)
