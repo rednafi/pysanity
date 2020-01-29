@@ -474,3 +474,12 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 3. [Python Style Guide -Kengz](https://github.com/kengz/python)
 4. [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
 5. [Google Docstring Style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+
+## Contributors
+
+<a href="https://github.com/rednafi/py-sanity/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=rednafi/py-sanity" />
+</a>
+
+Made with [contributors-img](https://contributors-img.firebaseapp.com).
+
