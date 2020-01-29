@@ -466,6 +466,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 * [Pythonic Code Review](https://access.redhat.com/blogs/766093/posts/2802001)
 * [Writing Great Code](https://www.oreilly.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html)
 * [PEP 8 — the Style Guide for Python Code](https://pep8.org/#overriding-principle)
+* [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)
 
 ## References
 1. [The Most Diabolical Python Antipattern - Real Python](https://realpython.com/the-most-diabolical-python-antipattern/)
