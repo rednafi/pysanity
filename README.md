@@ -111,7 +111,7 @@
 
     ```python
     # good
-    # these two functions does the same things but each of them
+    # these two functions do the same things but each of them
     # only has a single responsibility
 
     def calculate_statistics(list_of_numbers):
