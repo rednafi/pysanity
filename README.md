@@ -85,18 +85,57 @@
     # => [2]
     ```
 
-* Call function paramaters by specifying their names
+*  Robert C. Martin's [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) encourages that a function should only have a single responsibility. That is, it should do one thing and one thing only. It massively improves refactorability.
+
+There can be only one reason ever to change the function: if the way in which it does that thing must change.
+
+It also becomes clear when a function can be deleted: if, when making changes elsewhere, it becomes clear the function's single responsibility is no longer needed, simply remove it.
 
     ```python
-    def point(x, y, z=None):
-        # ...
+    # bad
+    # this function calculates multiple things and print them out at the same time
+    # ideally these two responsibilities can be split into two functions
+    def calculate_and_print_stats(list_of_numbers):
+        total = sum(list_of_numbers)
+        mean = statistics.mean(list_of_numbers)
+        median = statistics.median(list_of_numbers)
+        mode = statistics.mode(list_of_numbers)
 
-    # bad - unclear what the params mean
-    point(1, 0, 5)
-
-    # good
-    point(x=1, y=0, z=3)
+        print("-----------------Stats-----------------")
+        print(f"SUM: {total}")
+        print(f"MEAN: {mean}")
+        print(f"MEDIAN: {median}")
+        print(f"MODE: {mode}")
     ```
+
+    ```python
+    # good
+    # these two functions does the same things but each of them
+    # only has a single responsibility
+
+    def calculate_statistics(list_of_numbers):
+        """Calculates arithmatic sum, mean, median and mode."""
+
+        total = sum(list_of_numbers)
+        mean = statistics.mean(list_of_numbers)
+        median = statistics.median(list_of_numbers)
+        mode = statistics.mode(list_of_numbers)
+
+        return total, mean, median, mode
+
+
+    def print_statistics(total, mean, median, mode):
+        """Prints statistics on the console."""
+
+        print("-----------------Stats-----------------")
+        print(f"SUM: {total}")
+        print(f"MEAN: {mean}")
+        print(f"MEDIAN: {median}")
+        print(f"MODE: {mode}")
+    ```
+
+
+
 
 ## Docstring
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
@@ -183,7 +222,7 @@
     ```
     ```python
     # package1/module1
-    
+
     # bad
     from .module2 import func
 
@@ -480,5 +519,3 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 <a href="https://github.com/rednafi/py-sanity/graphs/contributors">
   <img src="https://contributors-img.firebaseapp.com/image?repo=rednafi/py-sanity" />
 </a>
-
-
