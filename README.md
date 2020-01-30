@@ -95,7 +95,7 @@
     # bad
     # this function calculates multiple things and print them out at the same time
     # ideally these two responsibilities can be split into two functions
-    
+
     def calculate_and_print_stats(list_of_numbers):
         total = sum(list_of_numbers)
         mean = statistics.mean(list_of_numbers)
@@ -135,7 +135,7 @@
         print(f"MODE: {mode}")
     ```
 
-
+*
 
 
 ## Docstring
@@ -251,7 +251,7 @@
 
 ## Naming Conventions
 
-* Use snake_case when naming variables, functions, and instances. Use it for file names too as they will be used in imports.
+* Use *snake_case* when naming **variables**, **functions**, and **instances**. Use it for *file names* too as they will be used in imports.
 
     ```python
     # bad
@@ -266,7 +266,16 @@
     this_is_an_object = {}
     def this_is_a_function():
     ```
-* Use PascalCase only when naming classes.
+* Global constants, that are usually defined on a module level, should be named in all captital letters with underscores separating words.
+
+    ```python
+    # bad
+    global_constant = 50
+
+    # good
+    GLOBAL_CONSTANT = 50
+    ```
+* Use PascalCase only when naming **classes**.
 
     ```python
     # bad
@@ -283,7 +292,7 @@
     ```
 
 * Avoid single letter names. Use descriptive and meaningful names - tell what the function does,
-or what data type an object is. Use description_object instead of object_description
+or what data type an object is. Use `description_object` instead of `object_description`.
 
     ```python
     # bad
