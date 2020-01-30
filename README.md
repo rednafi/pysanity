@@ -135,8 +135,6 @@
         print(f"MODE: {mode}")
     ```
 
-*
-
 
 ## Docstring
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
