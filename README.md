@@ -95,6 +95,7 @@
     # bad
     # this function calculates multiple things and print them out at the same time
     # ideally these two responsibilities can be split into two functions
+    
     def calculate_and_print_stats(list_of_numbers):
         total = sum(list_of_numbers)
         mean = statistics.mean(list_of_numbers)
