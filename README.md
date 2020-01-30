@@ -520,7 +520,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 2. [Flask Project Structure - Explore Flask](https://exploreflask.com/en/latest/blueprints.html#divisional)
 3. [Python Style Guide -Kengz](https://github.com/kengz/python)
 4. [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
-5. [Google Docstring Style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+5. [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
 
 ## Contributors
 
