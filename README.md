@@ -135,6 +135,48 @@
         print(f"MODE: {mode}")
     ```
 
+* Strive to write **pure** or at least **idempotent** functions as much as possible.
+
+    ==> **An idempotent function** always returns the same value given the same set of arguments, regardless of how many times it is called. The result does not depend on non-local variables, the mutability of arguments, or data from any I/O streams.
+
+    The following function is idempotent. The result of `square_num(5)` is always going to return `25`, regardless of how many times it is called:
+
+    ```python
+    def square_num(number):
+        """This is an idempotent function."""
+
+        return number ** 2
+    ```
+
+    This function takes in user input and is not idempotent.
+    ```python
+    def square_num():
+        """Return number_entered_by_user ** 2."""
+
+        number = int(input("Enter a number: "))
+        return number ** 2
+    ```
+
+    **Why:**
+    Idempotent functions are easy to test because they are guaranteed to always return the same result when called with the same arguments. Testing is simply a matter of checking that the value returned by various different calls to the function return the expected value.
+
+    ==> **A function is considered pure** if it is both idempotent and has no observable side effects. For example, if the idempotent version of idem_func(number) above printed the result before returning it, it is still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.
+
+    ```python
+    a_variable = 0
+
+    def square_num(number):
+        """Idempotent but not pure."""
+        sq_num = number ** 2
+        a_variable += square_num
+
+        return sq_num
+    ```
+
+    **Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
+
+
+
 
 ## Docstring
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
@@ -264,7 +306,7 @@
     this_is_an_object = {}
     def this_is_a_function():
     ```
-* Global constants, that are usually defined on a module level, should be named in all captital letters with underscores separating words.
+* **Global constants**, that are usually defined on a module level, should be named in all captital letters with underscores separating words.
 
     ```python
     # bad
