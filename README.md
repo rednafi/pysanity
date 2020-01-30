@@ -160,7 +160,7 @@
     **Why:**
     Idempotent functions are easy to test because they are guaranteed to always return the same result when called with the same arguments. Testing is simply a matter of checking that the value returned by various different calls to the function return the expected value.
 
-    ==> **A function is considered pure** if it is both idempotent and has no observable side effects. For example, if the idempotent version of idem_func(number) above printed the result before returning it, it is still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.
+    ==> **A function is considered pure** if it is both idempotent and has no observable side effects. For example, if the idempotent version of square_func(number)above printed the result before returning it or mutated a variable outside of the function scope, it is still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.
 
     ```python
     a_variable = 0
