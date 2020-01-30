@@ -87,9 +87,9 @@
 
 *  Robert C. Martin's [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) encourages that a function should only have a single responsibility. That is, it should do one thing and one thing only. It massively improves refactorability.
 
-There can be only one reason ever to change the function: if the way in which it does that thing must change.
+    ==> There can be only one reason ever to change the function: if the way in which it does that thing must change.
 
-It also becomes clear when a function can be deleted: if, when making changes elsewhere, it becomes clear the function's single responsibility is no longer needed, simply remove it.
+    ==> It also becomes clear when a function can be deleted: if, when making changes elsewhere, it becomes clear the function's single responsibility is no longer needed, simply remove it.
 
     ```python
     # bad
