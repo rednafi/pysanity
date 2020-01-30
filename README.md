@@ -167,6 +167,7 @@
 
     def square_num(number):
         """Idempotent but not pure."""
+        
         sq_num = number ** 2
         a_variable += square_num
 
@@ -306,6 +307,7 @@
     this_is_an_object = {}
     def this_is_a_function():
     ```
+
 * **Global constants**, that are usually defined on a module level, should be named in all captital letters with underscores separating words.
 
     ```python
