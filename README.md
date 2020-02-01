@@ -565,7 +565,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 3. [Python Style Guide -Kengz](https://github.com/kengz/python)
 4. [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
 5. [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
-
+6. [Code Style, Hitchhiker's Guide to Python - Kenneth Reitz](https://docs.python-guide.org/writing/style/)
 ## Contributors
 
 <a href="https://github.com/rednafi/py-sanity/graphs/contributors">
