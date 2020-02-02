@@ -501,7 +501,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
        event_level=logging.ERROR,  # Send errors as events
    )
    sentry_sdk.init(
-       dsn="https://75360515ec8c4d579a3a31e4daba81c4@sentry.io/2174802",
+       dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
        integrations=[sentry_logging],
    )
    ```
