@@ -84,6 +84,8 @@ html_theme_options = {
     "github_user": "rednafi",
     "github_repo": "py-sanity",
     "fixed_sidebar": True,
+    "github_banner": False,
+    "show_related": False,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
