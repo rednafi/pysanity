@@ -1,17 +1,4 @@
-<div align="center">
-<h1> Python Coding Guidelines for Sanity </h1>
-<p> <b> Simplifield Coding Directives for Less Cognitive Overhead </b> </p>
-
-</div>
-
-<div align="center">
-<h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
-<p> _Simple but not Simpler_ </p>
-<p> __Practicality Beats Purity __ </p>
-<p> ___Automation Brings Salvation___ </p>
-
-</div>
-
+# Py-Sanity
 ## Contents
 
 * [Auto-formatters](#auto-formatters)
@@ -167,7 +154,7 @@
 
     def square_num(number):
         """Idempotent but not pure."""
-        
+
         sq_num = number ** 2
         a_variable += square_num
 
@@ -476,8 +463,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     ```python
     # mod.py
-    # using the logging class defined in __init__.py 
-    
+    # using the logging class defined in __init__.py
+
     from . import logging
 
     def dumb_div(a):
@@ -494,14 +481,14 @@ or what data type an object is. Use `description_object` instead of `object_desc
     dumb_div(5)
     ```
  * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
-   
-   ```python 
+
+   ```python
    # __init__.py
-   
+
    import logging
    import sentry_sdk
    from sentry_sdk.integrations.logging import LoggingIntegration
-   
+
    sentry_logging = LoggingIntegration(
        level=logging.INFO,  # Capture info and above as breadcrumbs
        event_level=logging.ERROR,  # Send errors as events
@@ -511,13 +498,13 @@ or what data type an object is. Use `description_object` instead of `object_desc
        integrations=[sentry_logging],
    )
    ```
-   
+
    ```python
    # mod.py
-   # using the sentry logging class defined in __init__.py 
+   # using the sentry logging class defined in __init__.py
 
    from . import logging
-   
+
    def dumb_div(a):
         try:
             res = a // 0
