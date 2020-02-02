@@ -496,6 +496,10 @@ or what data type an object is. Use `description_object` instead of `object_desc
    ```python 
    # __init__.py
    
+   import logging
+   import sentry_sdk
+   from sentry_sdk.integrations.logging import LoggingIntegration
+   
    sentry_logging = LoggingIntegration(
        level=logging.INFO,  # Capture info and above as breadcrumbs
        event_level=logging.ERROR,  # Send errors as events
