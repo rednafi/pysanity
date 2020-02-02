@@ -1,4 +1,4 @@
-# Py-Sanity
+# Guidelines
 
 ## Auto-formatters
 * Use [black](https://github.com/psf/black/) with default settings (max character length 88 lines).
