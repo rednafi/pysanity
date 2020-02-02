@@ -491,17 +491,18 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     dumb_div(5)
     ```
- * For logging in production Flask applications, use [Sentry](https://sentry.io/for/flask/). You can view your logs in the Sentry Dashboard.
+ * For logging in production applications, use [Sentry](https://sentry.io/for/flask/). You can view your logs in the Sentry Dashboard.
    
    ```python 
    # __init__.py
    
-   import sentry_sdk
-   from sentry_sdk.integrations.flask import FlaskIntegration
-
+   sentry_logging = LoggingIntegration(
+       level=logging.INFO,  # Capture info and above as breadcrumbs
+       event_level=logging.ERROR,  # Send errors as events
+   )
    sentry_sdk.init(
-       dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
-       integrations=[FlaskIntegration()]
+       dsn="https://75360515ec8c4d579a3a31e4daba81c4@sentry.io/2174802",
+       integrations=[sentry_logging],
    )
    ```
    
@@ -514,7 +515,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
         except ValueError:
             res = a // 1
         except Exception:
-            logging.exception("Exception Occured")
+            logging.error("Exception Occured")
             res = None
 
         return res
