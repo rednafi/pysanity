@@ -475,7 +475,9 @@ or what data type an object is. Use `description_object` instead of `object_desc
 * Import and use it like this
 
     ```python
-    # using predefined logging in mod.py
+    # mod.py
+    # using the logging class defined in __init__.py 
+    
     from . import logging
 
     def dumb_div(a):
@@ -512,6 +514,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
    
    ```python
    # mod.py
+   using the sentry logging class defined in __init__.py 
 
    from . import logging
    
