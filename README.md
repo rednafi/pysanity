@@ -491,6 +491,36 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     dumb_div(5)
     ```
+ * For logging in production Flask applications, use (Sentry)[https://github.com/getsentry/sentry-python].
+   
+   ```python 
+   # __init__.py
+   
+   import sentry_sdk
+   from sentry_sdk.integrations.flask import FlaskIntegration
+
+   sentry_sdk.init(
+       dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
+       integrations=[FlaskIntegration()]
+   )
+   ```
+   
+   ```python
+   # mod.py
+   def dumb_div(a):
+        try:
+            res = a // 0
+        except ValueError:
+            res = a // 1
+        except Exception:
+            logging.exception("Exception Occured")
+            res = None
+
+        return res
+
+    dumb_div(5)
+   
+   
 
     Folder structure
 
