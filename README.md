@@ -491,7 +491,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     dumb_div(5)
     ```
- * For logging in production Flask applications, use (Sentry)[https://github.com/getsentry/sentry-python].
+ * For logging in production Flask applications, use [Sentry](https://github.com/getsentry/sentry-python). You can view your logs in the Sentry Dashboard.
    
    ```python 
    # __init__.py
@@ -507,6 +507,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
    
    ```python
    # mod.py
+   
    def dumb_div(a):
         try:
             res = a // 0
@@ -519,13 +520,10 @@ or what data type an object is. Use `description_object` instead of `object_desc
         return res
 
     dumb_div(5)
-   
-   
-
-    Folder structure
+   ```
 
     ```
-    # folder structure of the package
+    ### folder structure of the package
     packg
     ├── debug.log
     ├── __init__.py
