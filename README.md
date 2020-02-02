@@ -521,7 +521,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
         except ValueError:
             res = a // 1
         except Exception:
-            logging.error("Exception Occured")
+            logging.exception("Exception Occured")
             res = None
 
         return res
