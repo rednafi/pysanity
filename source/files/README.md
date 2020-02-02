@@ -1,20 +1,4 @@
 # Py-Sanity
-## Contents
-
-* [Auto-formatters](#auto-formatters)
-* [Functions](#functions)
-* [Docstring](#docstring)
-* [Imports](#imports)
-* [Whitespaces](#whitespaces)
-* [Naming Conventions](#naming-conventions)
-* [Exception Handling](#exception-handling)
-* [Logging](#logging)
-* [Testing](#testing)
-* [Flask](#flask)
-    * [Project Structure](#project-structure)
-* [The Holy Grail of Being Pythonic](#the-holy-grail-of-being-pythonic)
-* [References](#references)
-
 
 ## Auto-formatters
 * Use [black](https://github.com/psf/black/) with default settings (max character length 88 lines).
