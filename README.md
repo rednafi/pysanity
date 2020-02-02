@@ -491,7 +491,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     dumb_div(5)
     ```
- * For logging in production applications, use [Sentry](https://sentry.io/for/flask/). You can view your logs in the Sentry Dashboard.
+ * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
    
    ```python 
    # __init__.py
