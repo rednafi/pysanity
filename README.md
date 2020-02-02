@@ -467,7 +467,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     logging.basicConfig(
         level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
+        format="%\n(asctime)s [%(levelname)s] %(message)s",
         handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
     )
     ```
