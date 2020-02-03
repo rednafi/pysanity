@@ -5,7 +5,7 @@
 <span align="center">
 <pre>
 
-<a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/dev/imgs/logo.png" height="500" width="500" align="center" /></a>
+<a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="500" width="500" align="center" /></a>
 
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
@@ -17,5 +17,5 @@ ___Automation Brings Salvation___
 </span>
 
 <div align="center">
-    <h2> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/dev/docs/guidelines.md"> here. </a></h2>
+    <h2> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h2>
 </div>
