@@ -5,7 +5,7 @@
 <span align="center">
 <pre>
 
-<a href="https://requests.readthedocs.io/"><img src="https://raw.githubusercontent.com/rednafi/pysanity/dev/imgs/logo.png" align="center" /></a>
+<a href="https://requests.readthedocs.io/"><img src="https://raw.githubusercontent.com/rednafi/pysanity/dev/imgs/logo.png" height="500" width="500" align="center" /></a>
 
 
 <h2>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h2>
