@@ -5,7 +5,7 @@
 <span align="center">
 <pre>
 
-<a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="500" width="500" align="center" /></a>
+<a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="500" width="500" align="center"/></a>
 
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
