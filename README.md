@@ -17,6 +17,16 @@ ___Automation Brings Salvation___</h3>
 </span>
 
 <div align="center">
+    <img src="https://img.shields.io/github/issues/rednafi/pysanity"/>
+    <img src="https://img.shields.io/github/forks/rednafi/pysanity"/>
+    <img src="https://img.shields.io/github/stars/rednafi/pysanity"/>
+    <img src="https://img.shields.io/github/license/rednafi/pysanity"/>
+    <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Frednafi%2Fpysanity"/>
+</div>
+</div>
+
+
+<div align="center">
     <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
 </div>
 
