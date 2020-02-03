@@ -4,9 +4,9 @@
 
 <span align="center">
 <pre>
-
+<kbd>
 <a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="500" width="500" align="center"/></a>
-
+</kbd>
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
 <b>_Simple but not Simpler_
