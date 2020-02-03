@@ -1,6 +1,6 @@
 <div align="center">
 <h1> PySanity </h1>
-<h3> <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> <i> Python Coding Guidelines for Sanity </i></a> </h3>
+<h4> <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> Python Coding Guidelines for Sanity </a> </h4>
 </div>
 
 <span align="center">
@@ -17,7 +17,7 @@ ___Automation Brings Salvation___
 </span>
 
 <div align="center">
-    <h2> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h2>
+    <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
 </div>
 
 <div align="center">
@@ -25,11 +25,4 @@ ___Automation Brings Salvation___
   <ul> Fork the repo </ul>
   <ul> Go to `docs/guidelines.md` </ul>
   <ul> Make your edit, push to a new branch & send a pull request </ul>
-</div>
-
-<div align="center">
-<h2> Contributors </h2>
-<a href="https://github.com/rednafi/py-sanity/graphs/contributors">
-  <img src="https://contributors-img.firebaseapp.com/image?repo=rednafi/py-sanity" />
-</a>
 </div>
