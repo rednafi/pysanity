@@ -9,10 +9,10 @@
 
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
-<b>_Simple but not Simpler_
+<h3>_Simple but not Simpler_
 __Practicality Beats Purity __
-___Automation Brings Salvation___
-</b>
+___Automation Brings Salvation___</h3>
+
 </pre>
 </span>
 
@@ -21,7 +21,7 @@ ___Automation Brings Salvation___
 </div>
 
 <div align="center">
- <h2> Contribution Guidelines </h2>
+ <h3> Contribution Guidelines </h3>
   <ul> Fork the repo </ul>
   <ul> Go to `docs/guidelines.md` </ul>
   <ul> Make your edit, push to a new branch & send a pull request </ul>
