@@ -17,5 +17,5 @@ ___Automation Brings Salvation___
 </span>
 
 <div align="center">
-    <h2> Read the docs <a href="https://github.com/rednafi/pysanity/blob/dev/docs/guidelines.md"> here. </a></h2>
+    <h2> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/dev/docs/guidelines.md"> here. </a></h2>
 </div>
