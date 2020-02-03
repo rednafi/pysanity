@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-
+<img src="art/logo.png" alt="logo.png" height="500", width="500">
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
 <p> _Simple but not Simpler_ </p>
 <p> __Practicality Beats Purity __ </p>
