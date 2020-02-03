@@ -1,6 +1,6 @@
 <div align="center">
 <h1> PySanity </h1>
-<h3> <i> Python Coding Guidelines for Sanity </i> </h3>
+<h4> <i> Python Coding Guidelines for Sanity </i> </h4>
 </div>
 
 <span align="center">
