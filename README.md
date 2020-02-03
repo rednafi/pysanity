@@ -19,3 +19,17 @@ ___Automation Brings Salvation___
 <div align="center">
     <h2> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h2>
 </div>
+
+<div align="center">
+ <h2> Contribution Guidelines </h2>
+  <ul> Fork the repo </ul>
+  <ul> Go to `docs/guidelines.md` </ul>
+  <ul> Make your edit, push to a new branch & send a pull request </ul>
+</div>
+
+<div align="center">
+<h2> Contributors </h2>
+<a href="https://github.com/rednafi/py-sanity/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=rednafi/py-sanity" />
+</a>
+</div>
