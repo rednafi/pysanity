@@ -35,7 +35,7 @@ ___Automation Brings Salvation___</h3>
         <b>Use the badge in your project's README.md</b>
         <br>
         <pre align="left">
-  [![img](https://img.shields.io/badge/code%20style-pysanity-teal)](https://github.com/rednafi/pysanity)
+[![img](https://img.shields.io/badge/code%20style-pysanity-teal)](https://github.com/rednafi/pysanity)
     </pre>
     </p>
     <p>
