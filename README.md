@@ -22,6 +22,8 @@ ___Automation Brings Salvation___</h3>
     <a href="https://github.com/rednafi/pysanity/stargazers"><img   src="https://img.shields.io/github/stars/rednafi/pysanity"/></a>
     <a href="https://github.com/rednafi/pysanity/blob/master/LICENSE"<img src="https://img.shields.io/github/license/rednafi/pysanity">
     <a href="https://twitter.com/intent/retweet?tweet_id=1222434622442594304"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Frednafi%2Fpysanity"/></a>
+    <a href="https://github.com/rednafi/pysanity"><img src="https://img.shields.io/badge/code%20style-pysanity-teal"/>
+    </a>
 </div>
 
 
@@ -30,8 +32,24 @@ ___Automation Brings Salvation___</h3>
 </div>
 
 <div align="center">
- <h3> Contribution Instructions  </h3>
-  <ul> Fork the repo </ul>
-  <ul> Go to `docs/guidelines.md` </ul>
-  <ul> Make your edit, push to a new branch & send a pull request </ul>
+    <h3 Show Your Style </h3>
+    <p> 
+        Use the badge in your project's README.md      
+    <pre> 
+        [![code style: pysanity](https://img.shields.io/badge/code%20style-pysanity-teal)](https://github.com/rednafi/pysanity)
+    </pre> 
+        Use the badge in your project's README.rst
+        <pre>
+            .. image:: https://img.shields.io/badge/code%20style-pysanity-teal
+                :target: https://github.com/rednafi/pysanity
+        </pre>
+    </p>
+    
+</div>
+
+<div align="center">
+ <h3> Contribution Instructions </h3>
+      Fork the repo<br>
+      Go to `docs/guidelines.md`<br>
+      Make your edit, push to a new branch & send a pull request<br>
 </div>
