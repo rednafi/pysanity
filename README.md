@@ -17,10 +17,10 @@ ___Automation Brings Salvation___</h3>
 </span>
 
 <div align="center">
-    <img src="https://img.shields.io/github/issues/rednafi/pysanity"/>
-    <img src="https://img.shields.io/github/forks/rednafi/pysanity"/>
-    <img src="https://img.shields.io/github/stars/rednafi/pysanity"/>
-    <img src="https://img.shields.io/github/license/rednafi/pysanity"/>
+    <a href="https://github.com/rednafi/pysanity/issues"><img src="https://img.shields.io/github/issues/rednafi/pysanity"/></a>
+    <a href="https://github.com/rednafi/pysanity/network/members"><img src="https://img.shields.io/github/forks/rednafi/pysanity"/></a>
+    <a href="https://github.com/rednafi/pysanity/stargazers"><img   src="https://img.shields.io/github/stars/rednafi/pysanity"/></a>
+    <a href=""<img src="https://img.shields.io/github/license/rednafi/pysanity">
     <img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Frednafi%2Fpysanity"/>
 </div>
 </div>
