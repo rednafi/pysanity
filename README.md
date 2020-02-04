@@ -34,15 +34,19 @@ ___Automation Brings Salvation___</h3>
 <div align="center">
     <h3 Show Your Style </h3>
     <p> 
-        Use the badge in your project's README.md      
+        Use the badge in your project's README.md<br>
+    <span align="left">
     <pre> 
         [![code style: pysanity](https://img.shields.io/badge/code%20style-pysanity-teal)](https://github.com/rednafi/pysanity)
     </pre> 
-        Use the badge in your project's README.rst
+    </span>
+        Use the badge in your project's README.rst<br>
+        <span align=left>
         <pre>
             .. image:: https://img.shields.io/badge/code%20style-pysanity-teal
                 :target: https://github.com/rednafi/pysanity
         </pre>
+        </span>
     </p>
     
 </div>
