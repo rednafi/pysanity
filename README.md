@@ -15,6 +15,9 @@ ___Automation Brings Salvation___</h3>
 </pre>
 </span>
 
+
+<p>&nbsp;</p>
+
 <div align="center">
     <a href="https://github.com/rednafi/pysanity/issues"><img src="https://img.shields.io/github/issues/rednafi/pysanity" /></a>
     <a href="https://github.com/rednafi/pysanity/network/members"><img src="https://img.shields.io/github/forks/rednafi/pysanity" /></a>
@@ -25,9 +28,13 @@ ___Automation Brings Salvation___</h3>
         </a>
 </div>
 
+<p>&nbsp;</p>
+
 <div align="center">
     <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
 </div>
+
+<p>&nbsp;</p>
 
 <div align="center">
     <h3> Show Your Style </h3>
@@ -48,6 +55,8 @@ ___Automation Brings Salvation___</h3>
     </p>
 
 </div>
+
+<p>&nbsp;</p>
 
 <div align="center">
     <h3> Contribution Instructions </h3> Fork the repo
