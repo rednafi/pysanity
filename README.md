@@ -32,7 +32,7 @@ ___Automation Brings Salvation___</h3>
 </div>
 
 <div align="center">
-    <h3 Show Your Style </h3>
+    <h3> Show Your Style </h3>
     <p> 
         Use the badge in your project's README.md<br>
     <span align="left">
