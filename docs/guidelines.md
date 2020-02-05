@@ -16,7 +16,7 @@
 
 
 ## Auto-formatters
-* Use [black](https://github.com/psf/black/) with default settings (max character length 88 lines).
+* Use [black](https://github.com/psf/black/) with default settings (max line length 88 characters).
 * Use [flake8](https://github.com/PyCQA/flake8) to catch linting errors.
 * Use [isort](https://github.com/timothycrosley/isort) to sort the imports.
 
