@@ -60,7 +60,7 @@ ___Automation Brings Salvation___</h3>
 
 <div align="center">
     <h3> Contribution Instructions </h3> Fork the repo
-    <br> Go to `docs/guidelines.md`
+    <br> Go to <code>docs/guidelines.md</code>
     <br> Make your edit, push to a new branch & send a pull request
     <br>
 </div>
