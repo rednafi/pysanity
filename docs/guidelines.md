@@ -7,6 +7,8 @@
 * [Naming Conventions](#naming-conventions)
 * [Exception Handling](#exception-handling)
 * [Logging](#logging)
+* [Advance Patterns](#advance-patterns)
+   * [Decorators](#decorators)
 * [Testing](#testing)
 * [Flask](#flask)
     * [Project Structure](#project-structure)
