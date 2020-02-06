@@ -163,8 +163,6 @@
     **Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
 
 
-
-
 ## Docstring
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
 
@@ -526,6 +524,38 @@ or what data type an object is. Use `description_object` instead of `object_desc
     └── mod.py
     ```
 
+## Advance Patterns
+### Decorators
+Instead of directly changing the source code, when possible, use [decorators](https://realpython.com/primer-on-python-decorators/) to change or monitor function/methods. Follow [this](https://stackoverflow.com/a/39335652/8963300) style taken from David Beazly's [Python Cookbook](https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/) to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter. 
+
+```python
+from functools import partial, wraps
+
+def decorator(func=None, foo="spam"):
+    if func is None:
+        return partial(decorator, foo=foo)
+
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        # do something with `func` and `foo`, if you're so inclined
+        pass
+
+    return wrapper
+```
+
+This can be used with or without parameters.
+
+```python
+# applying decorator without any parameter
+@decorator
+def f(*args, **kwargs):
+    pass
+    
+# applying decorator with extra parameter
+@decorator(foo="buzz")
+def f(*args, **kwargs):
+    pass
+```
 
 ## Testing
 * Use [pytest](https://docs.pytest.org/en/latest/) to write your tests
@@ -590,6 +620,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 4. [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
 5. [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
 6. [Code Style, Hitchhiker's Guide to Python - Kenneth Reitz](https://docs.python-guide.org/writing/style/)
+7. [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
 ## Contributors
 
 <a href="https://github.com/rednafi/py-sanity/graphs/contributors">
