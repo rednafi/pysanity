@@ -173,6 +173,40 @@ This is an ever evolving, battle tested and marginally opinionated python coding
 
     fact = ExampleDummyFactory()
     ```
+* Use underscores before private **attributes**, **methods**, **variables** and **functions**.
+
+    ```python
+    # private methods and attributes demo
+    
+    class SomeThing:
+        """A class for demonstration."""
+
+        def __init__(self):
+            # private attribute
+            self._private_att = 10
+
+        def _private_method(self):
+            """This is a private method."""
+            pass
+
+        def method_x(self):
+            # using the private attribute
+            res_private_att = self._private_att
+            # calling the private method
+            res_private_method = self._private_method()
+    ```
+
+    ```python
+    # private function demo
+
+    def _private_function():
+        pass
+
+    def public_function():
+        # calling the private function
+        res_private_function = _private_function()
+    ```
+
 
 * Avoid single letter names. Use descriptive and meaningful names - tell what the function does,
 or what data type an object is. Use `description_object` instead of `object_description`.
