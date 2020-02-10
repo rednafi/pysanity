@@ -177,7 +177,7 @@ This is an ever evolving, battle tested and marginally opinionated python coding
 
     ```python
     # private methods and attributes demo
-    
+
     class SomeThing:
         """A class for demonstration."""
 
@@ -670,6 +670,12 @@ yourapp/
 ```
 
 Read more on divisional structure [here.](https://exploreflask.com/en/latest/blueprints.html#divisional)
+
+<div class align="center">
+<h1> Documentation Guideline</h1>
+</div>
+
+Coming Soon!!
 
 
 # The Holy Grail of Being Pythonic
