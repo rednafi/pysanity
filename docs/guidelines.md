@@ -20,14 +20,17 @@
 
 This is an ever evolving, battle tested and marginally opinionated python coding guideline that is currently being enforced at my company [shopup](https://www.linkedin.com/company/shopfront-limited/). Primarily, it is an attempt to document some of the implicit lessons and good practices that we have picked up while writing, maintaining and documenting python code in production. You may not agree with all the conventions mentioned here but other than the style guide where everyone has different ideas about how code should be formatted, the conventions mentioned here are almost universally accepted as good practices by the python community. The aim is not to have a strict guideline that is imposed upon every codebase, rather it exists to provide a baseline  and reduce unnecessary cognitive overload that arises from disagreements during internal code reviews. The guideline is divided into three major segments.
 
-• **Styling Guide:** A mashup of simplified pep8, pep257 and a few tools for styling automation
+• **Styling Guideline:** A mashup of simplified pep8, pep257 and a few tools for styling automation
 
-• **Coding Guide:** Conventions, best practices and design patterns
+• **Coding Guideline:** Conventions, best practices and design patterns
 
-• **Documentation Guide:** An attempt to streamline API documentation
+• **Documentation Guideline:** An attempt to streamline API documentation
 
-# Styling Guide
-##  Auto Formatters
+<div class align="center">
+<h1> Styling Guideline</h1>
+</div>
+
+## Auto Formatters
 
 * Use [black](https://github.com/psf/black/) with default settings (max line length 88 characters).
 * Use [flake8](https://github.com/PyCQA/flake8) to catch linting errors.
@@ -229,8 +232,10 @@ or what data type an object is. Use `description_object` instead of `object_desc
     for idx, book in book_df.iterrow():
         add_item(book)
     ```
-
-# Coding Guide
+<div class align="center">
+<h1> Coding Guideline
+</h1>
+</div>
 
 ## Functions
 
