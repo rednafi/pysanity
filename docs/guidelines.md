@@ -87,7 +87,19 @@ This is an ever evolving, battle tested and marginally opinionated python coding
             [description]
         """
     ```
+* Examples should be given in REPL style
 
+    ```python
+    Examples
+    --------
+    >>> dumb_add(1, 2, 3, 4, 5)
+    15
+
+    Comment explaining the second example
+
+    >>> dumb_add(6, 7, 8, 9, 10)
+    40
+    ```
 * Single line docstring.
 
     ```python
