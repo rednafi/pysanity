@@ -61,58 +61,6 @@ This is an ever evolving, battle tested and marginally opinionated python coding
 
     => Black is not compatible with isort. So it's better to run black after running isort.
 
-## Docstrings
-* Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
-
-    ```python
-    def dumb_add(num0, num1, num2, num3, num4):
-        """[summary]
-
-        Parameters
-        ----------
-        num0 : [type]
-            [description]
-        num1 : [type]
-            [description]
-        num2 : [type]
-            [description]
-        num3 : [type]
-            [description]
-        num4 : [type]
-            [description]
-
-        Returns
-        -------
-        [type]
-            [description]
-        """
-    ```
-* Examples should be given in REPL style
-
-    ```python
-    Examples
-    --------
-    >>> dumb_add(1, 2, 3, 4, 5)
-    15
-
-    Comment explaining the second example
-
-    >>> dumb_add(6, 7, 8, 9, 10)
-    40
-    ```
-* Single line docstring.
-
-    ```python
-    def dumb_sub(num1, num0):
-        """Subtracting num0 from num1."""
-    ```
-* Inline comments should start with lowercase letter.
-
-    ```python
-    # going through the student list
-    for idx, student in enumerate(students_list):
-        ...
-    ```
 
 ## Whitespaces
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
@@ -675,7 +623,58 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 <h1> Documentation Guideline</h1>
 </div>
 
-Coming Soon!!
+## Docstrings
+* Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
+
+    ```python
+    def dumb_add(num0, num1, num2, num3, num4):
+        """[summary]
+
+        Parameters
+        ----------
+        num0 : [type]
+            [description]
+        num1 : [type]
+            [description]
+        num2 : [type]
+            [description]
+        num3 : [type]
+            [description]
+        num4 : [type]
+            [description]
+
+        Returns
+        -------
+        [type]
+            [description]
+        """
+    ```
+* Examples should be given in REPL style
+
+    ```python
+    Examples
+    --------
+    >>> dumb_add(1, 2, 3, 4, 5)
+    15
+
+    Comment explaining the second example
+
+    >>> dumb_add(6, 7, 8, 9, 10)
+    40
+    ```
+* Single line docstring.
+
+    ```python
+    def dumb_sub(num1, num0):
+        """Subtracting num0 from num1."""
+    ```
+* Inline comments should start with lowercase letter.
+
+    ```python
+    # going through the student list
+    for idx, student in enumerate(students_list):
+        ...
+    ```
 
 
 # The Holy Grail of Being Pythonic
