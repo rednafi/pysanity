@@ -676,6 +676,27 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
         ...
     ```
 
+* In case of documenting classes, you should mention the methods and attributes like this. The methods should be documented like the functions.
+
+    ```python
+    class Dummy(ndarray):
+        """
+        Dummy classes for demonstration.
+
+        Attributes
+        ----------
+        attribute_1 : float
+            Set up your goal.
+
+        Methods
+        -------
+        method_1(c=2)
+            Runs a self-referential loop n times.
+        method_2(n=1.0)
+            Prints Nietzsche's n times.
+        """
+
+
 
 # The Holy Grail of Being Pythonic
 * [Pythonic Code Review](https://access.redhat.com/blogs/766093/posts/2802001)
