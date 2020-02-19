@@ -783,7 +783,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
         method_2(n=1.0)
             Prints Nietzsche's n times.
         """
-
+    ```
 
 
 # The Holy Grail of Being Pythonic
