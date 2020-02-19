@@ -257,9 +257,10 @@ or what data type an object is. Use `description_object` instead of `object_desc
         return lst
 
     init_list(1)
-    # => [1]
+    # >> [1]
+
     init_list(2)
-    # => [2]
+    # >> [2]
     ```
 
 *  Robert C. Martin's [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) encourages that a function should only have a single responsibility. That is, it should do one thing and one thing only. It massively improves refactorability.
@@ -447,6 +448,91 @@ or what data type an object is. Use `description_object` instead of `object_desc
         pass
     except Exception:
         logging.exception("Caught an error", exec_info=True)
+    ```
+## Functional Paradigm & Lambda Expressions
+
+Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it a functional language.
+
+* Limit your usage of anonymized `lambda` functions to a minimum.
+
+    **Why:** When error occurs in `lambda` expression, Python does not provide the function name in the traceback. Also, they are harder to read when the expression gets complicated.
+
+    ```python
+    # bad
+    div_zero = lambda x: x / 0
+    div_zero(2)
+    ```
+    The traceback in this case looks like this:
+    ```python
+    Traceback (most recent call last):
+        File "<stdin>", line 1, in <module>
+        File "<stdin>", line 1, in <lambda>
+    ZeroDivisionError: division by zero
+    ```
+
+* Do not assign a lambda expression (flake8 will complain if do so). Define a normal function if the need arises.
+    ```python
+    # bad
+    divider = lambda some_list: list(map(lambda n: n // 2, some_list))
+
+    divider([1,2,3])
+    # >> [0, 1, 1]
+
+    # good
+    def divider(some_list):
+        return [x//2 for x in some_list]
+
+    divider([1,2,3])
+    # >> [0, 1, 1]
+    ```
+* Limit your usage of `map`, `filter`, `reduce`.
+
+    **Why:** In almost all cases, they can be replaced with `list comprehension` and built in functions.
+
+    ==> **Replacing map:**
+    ```python
+    # bad
+    customers = ["Alice", "Bob", "Frank", "Ann"]
+    result = map(lambda x: x[0], customers)
+
+    print(list(result))
+    # >> ['A', 'B', 'F', 'A']
+
+    # good
+    customers = ["Alice", "Bob", "Frank", "Ann"]
+    result = [ x[0] for x in customers ]
+
+    print(result)
+    # >> ['A', 'B', 'F', 'A']
+    ```
+
+    ==> **Replacing filter:**
+    ```python
+    # bad
+    customers = ["Alice", "Bob", "Frank", "Ann"]
+    result = filter(lambda x: x[0] == "A", customers)
+
+    print(list(result))
+    # >> ['Alice', 'Ann']
+
+    # good
+    customers = ["Alice", "Bob", "Frank", "Ann"]
+    result = [ x for x in customers if x[0] == "A" ]
+
+    print(result)
+    # >> ['Alice', 'Ann']
+    ```
+
+    ==> **Replacing reduce:**
+    ```python
+    # bad
+    from functools import reduce
+    print(reduce(lambda x, y: x + y, range(1, 6)))
+    # >> 15
+
+    # good
+    print(sum(range(1,6)))
+    # >> 15
     ```
 
 ## Logging
