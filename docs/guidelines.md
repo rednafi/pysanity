@@ -800,3 +800,5 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 5. [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
 6. [Code Style, Hitchhiker's Guide to Python - Kenneth Reitz](https://docs.python-guide.org/writing/style/)
 7. [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
+8. [Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?](https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3)
+
