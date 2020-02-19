@@ -453,11 +453,11 @@ or what data type an object is. Use `description_object` instead of `object_desc
     ```
 ## Functional Paradigm & Lambda Expressions
 
-Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it a functional language.
+Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python was not designed as a functional language and simply having a few map, filter type functions does not make it a functional language.
 
 * Limit your usage of anonymized `lambda` functions to a minimum.
 
-    **Why:** When error occurs in `lambda` expression, Python does not provide the function name in the traceback. Also, they are harder to read when the expression gets complicated.
+    **Why:** When error occurs in a `lambda` expression, Python does not provide the function's name in the traceback. Also, they are harder to read when the expressions get complicated.
 
     ```python
     # bad
@@ -472,7 +472,7 @@ Some people claim that Python is, at least partly, a functional language. Howeve
     ZeroDivisionError: division by zero
     ```
 
-* Do not assign a lambda expression (flake8 will complain if do so). Define a normal function if the need arises.
+* Do not assign lambda expressions to variables(flake8 will complain if do so). Define normal functions if the need arises.
     ```python
     # bad
     divider = lambda some_list: list(map(lambda n: n // 2, some_list))
