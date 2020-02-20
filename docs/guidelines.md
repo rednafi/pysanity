@@ -405,7 +405,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
        ├── module1.py
        └── module2.py
     ```
-    
+
     ```python
     # package1/module1
 
@@ -467,7 +467,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
 Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
 
-However, Python has, in fact functional capabilities. This is because functions are first class citizens here. They are expressions which can be evaluated at runtime. They can be passed as argument and you can return them from other functions. They can 'remember' things in closure.
+However, Python has in fact, functional capabilities. This is because functions are first class citizens here. They are expressions which can be evaluated at runtime. They can be passed as argument and you can return them from other functions. They can 'remember' things in closure.
 
 On top of that functional programming is also a way to think. Avoiding side effects and mutations for example are things you can probably always benefit from in some way if its not too strictly and mechanically enforced. Here are a few guidelines that will keep you from abusing the functional aspects of python.
 
@@ -645,7 +645,30 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
 [**⇑ back to top**](#contents)
 
-## Advance Patterns
+## Patterns
+
+### Null Comparison
+* As PEP8 suggests, comparisons to singletons like `None` should always be done with `is` or `is not`, never the equality (`=` / `!=`) operators.
+
+    **Why:** The `==` operator compares the values of both the operands and checks for value equality. Whereas `is` operator checks whether both the operands refer to the same object or not.
+
+    ```python
+    # bad
+    if val == None:
+        # ...
+
+    if val != None:
+        # ...
+    ```
+    ```python
+    # good
+    if val is None:
+        # ...
+
+    if val is not None:
+        # ...
+    ```
+
 ### Decorators
 Instead of directly changing the source code, when possible, use [decorators](https://realpython.com/primer-on-python-decorators/) to change or monitor function/methods. Follow [this](https://stackoverflow.com/a/39335652/8963300) style taken from David Beazly's [Python Cookbook](https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/) to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter.
 
@@ -830,5 +853,6 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 7. [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
 8. [Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?](https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3)
 9. [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
+10. [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
 
 [**⇑ back to top**](#contents)
