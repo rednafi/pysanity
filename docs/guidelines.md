@@ -451,9 +451,13 @@ or what data type an object is. Use `description_object` instead of `object_desc
     except Exception:
         logging.exception("Caught an error", exec_info=True)
     ```
-## Functional Paradigm & Lambda Expressions
+## Functional Paradigm
 
-Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it a functional language.
+Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
+
+However, Python has, in fact functional capabilities. This is because functions are first class citizens here. They are expressions which can be evaluated at runtime. They can be passed as argument and you can return them from other functions. They can 'remember' things in closure.
+
+On top of that functional programming is also a way to think. Avoiding side effects and mutations for example are things you can probably always benefit from in some way if its not too strictly and mechanically enforced. Here are a few guidelines that will keep you from abusing the functional aspects of python.
 
 * Limit your usage of anonymized `lambda` functions to a minimum.
 
