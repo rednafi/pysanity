@@ -63,6 +63,8 @@ This is an ever evolving, battle tested and marginally opinionated python coding
 
     => Black is not compatible with isort. So it's better to run black after running isort.
 
+[**⇑ back to top**](#contents)
+
 
 ## Whitespaces
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
@@ -80,6 +82,8 @@ This is an ever evolving, battle tested and marginally opinionated python coding
     def foo():
     ∙∙∙∙return bar
     ```
+
+[**⇑ back to top**](#contents)
 
 ## Naming Conventions
 
@@ -231,6 +235,9 @@ or what data type an object is. Use `description_object` instead of `object_desc
     for idx, book in book_df.iterrow():
         add_item(book)
     ```
+
+[**⇑ back to top**](#contents)
+
 <div class align="center">
 <h1> Coding Guideline
 </h1>
@@ -356,6 +363,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     **Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
 
+ [**⇑back to top**](#contents)
 
 ## Imports
 
@@ -396,8 +404,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
     └── package1
        ├── module1.py
        └── module2.py
-
     ```
+    
     ```python
     # package1/module1
 
@@ -407,6 +415,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
     # good
     from package1.module2 import func
     ```
+
+[**⇑ back to top**](#contents)
 
 ## Exception Handling
 
@@ -451,6 +461,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
     except Exception:
         logging.exception("Caught an error", exec_info=True)
     ```
+[**⇑ back to top**](#contents)
+
 ## Functional Paradigm
 
 Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
@@ -541,6 +553,8 @@ On top of that functional programming is also a way to think. Avoiding side effe
     # >> 15
     ```
 
+[**⇑ back to top**](#contents)
+
 ## Logging
 * Instantiate your logger in your package's `__init__.py` module. See how it's done in `requests` library [here.](https://github.com/kennethreitz/requests)
 
@@ -629,6 +643,8 @@ On top of that functional programming is also a way to think. Avoiding side effe
     └── mod.py
     ```
 
+[**⇑ back to top**](#contents)
+
 ## Advance Patterns
 ### Decorators
 Instead of directly changing the source code, when possible, use [decorators](https://realpython.com/primer-on-python-decorators/) to change or monitor function/methods. Follow [this](https://stackoverflow.com/a/39335652/8963300) style taken from David Beazly's [Python Cookbook](https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/) to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter.
@@ -662,6 +678,8 @@ def f(*args, **kwargs):
     pass
 ```
 
+[**⇑ back to top**](#contents)
+
 ## Testing
 * Use [pytest](https://docs.pytest.org/en/latest/) to write your tests
 
@@ -680,6 +698,8 @@ def f(*args, **kwargs):
     assert result == False
     assert len(result_list) > 0
     ```
+
+[**⇑ back to top**](#contents)
 
 ## Flask
 
@@ -710,6 +730,8 @@ yourapp/
 ```
 
 Read more on divisional structure [here.](https://exploreflask.com/en/latest/blueprints.html#divisional)
+
+[**⇑ back to top**](#contents)
 
 <div class align="center">
 <h1> Documentation Guideline</h1>
@@ -788,13 +810,15 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
             Prints Nietzsche's n times.
         """
     ```
-
+[**⇑ back to top**](#contents)
 
 # The Holy Grail of Being Pythonic
 * [Pythonic Code Review](https://access.redhat.com/blogs/766093/posts/2802001)
 * [Writing Great Code](https://www.oreilly.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html)
 * [PEP 8 — the Style Guide for Python Code](https://pep8.org/#overriding-principle)
 * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)
+
+[**⇑ back to top**](#contents)
 
 # References
 1. [The Most Diabolical Python Antipattern - Real Python](https://realpython.com/the-most-diabolical-python-antipattern/)
@@ -806,3 +830,5 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 7. [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
 8. [Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?](https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3)
 9. [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
+
+[**⇑ back to top**](#contents)
