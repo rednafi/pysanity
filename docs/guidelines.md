@@ -1,6 +1,5 @@
 # Contents
 
-   * [What is this?](#what-is-this)
    * [ Styling Guideline](#-styling-guideline)
       * [Auto Formatters](#auto-formatters)
       * [Whitespaces](#whitespaces)
