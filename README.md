@@ -3,6 +3,8 @@
     <h4> <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> Python Coding Guidelines for Sanity </a> </h4>
 </div>
 
+<div>
+
 <span align="center">
 <pre>
 <a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="450" width="450" align="center"/></a>
@@ -14,7 +16,7 @@ ___Automation Brings Salvation___</h3>
 
 </pre>
 </span>
-
+</div>
 
 <p>&nbsp;</p>
 
@@ -42,6 +44,7 @@ ___Automation Brings Salvation___</h3>
 
 • Documentation Guideline: An attempt to streamline API documentation
 </p>
+
 
 <div align="center">
     <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
