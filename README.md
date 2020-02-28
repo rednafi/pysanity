@@ -3,7 +3,7 @@
     <h4> <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> Python Coding Guidelines for Sanity </a> </h4>
 </div>
 
-<div>
+<div align="center">
 
 <span align="center">
 <pre>
