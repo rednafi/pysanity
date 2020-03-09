@@ -10,9 +10,11 @@
 <a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="450" width="450" align="center"/></a>
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
-<h3>_Simple but not Simpler_
-__Practicality Beats Purity __
-___Automation Brings Salvation___</h3>
+<h3>
+__Practicality Beats Purity__
+___Automation Brings Salvation___
+____Abstraction is chaos concealed by confusion____
+</h3>
 
 </pre>
 </span>
