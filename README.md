@@ -13,7 +13,7 @@
 <h3>
 __Practicality Beats Purity__
 ___Automation Brings Salvation___
-____Abstraction is Chaos, Concealed by Confusion____
+____Abstraction is Chaos Concealed by Confusion____
 </h3>
 
 </pre>
