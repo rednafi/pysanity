@@ -560,7 +560,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     logging.basicConfig(
         level=logging.INFO,
-        format="%\n(asctime)s [%(levelname)s] %(message)s",
+        format="\n(asctime)s [%(levelname)s] %(message)s",
         handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
     )
     ```
