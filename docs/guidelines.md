@@ -497,7 +497,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     **Why:** In almost all cases, they can be replaced with `list comprehension` and built in functions.
 
-    ==> **Replacing map:**
+    ==> **Map Alternative:**
     ```python
     # bad
     customers = ["Alice", "Bob", "Frank", "Ann"]
@@ -514,7 +514,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
     # >> ['A', 'B', 'F', 'A']
     ```
 
-    ==> **Replacing filter:**
+    ==> **Filter Alternative:**
     ```python
     # bad
     customers = ["Alice", "Bob", "Frank", "Ann"]
@@ -531,7 +531,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
     # >> ['Alice', 'Ann']
     ```
 
-    ==> **Replacing reduce:**
+    ==> **Reduce Alternative:**
     ```python
     # bad
     from functools import reduce
