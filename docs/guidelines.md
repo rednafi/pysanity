@@ -624,7 +624,37 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     dumb_div(5)
    ```
+ * In some cases you will want to decouple exception handling logic from your core logic. You can use Python's context manager decorator to achieve that.
+ 
+```python
+import logging 
+from contextlib import contextmanager
 
+class Calculation:
+    """Dummy class for demonstrating exception decoupling with contextmanager."""
+
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+
+    @contextmanager
+    def errorhandler(self):
+        try:
+            yield
+        except ZeroDivisionError:
+            print(
+                f"Custom handling of Zero Division Error! Printing "
+                "only 2 levels of traceback.."
+            )
+            logging.exception("ZeroDivisionError")
+
+    def main_func(self):
+        """Function that we want to save from nasty error handling logic."""
+
+        with self.errorhandler():
+            return self.a / self.b
+    ```
+    
     ```
     # folder structure of the logging demo package
     packg
