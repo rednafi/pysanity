@@ -55,28 +55,6 @@ ____Abstraction is Chaos Concealed by Confusion____
 <p>&nbsp;</p>
 
 <div align="center">
-    <h3> Show Your Style </h3>
-    <p>
-        <b>Use the badge in your project's README.md</b>
-        <br>
-<pre align="left">
-[![img](https://img.shields.io/badge/code%20style-pysanity-teal)](https://github.com/rednafi/pysanity)
-</pre>
-    </p>
-    <p>
-        <b>Use the badge in your project's README.rst</b>
-        <br>
-<pre align="center">
-.. image:: https://img.shields.io/badge/code%20style-pysanity-teal
-    :target: https://github.com/rednafi/pysanity
-</pre>
-    </p>
-
-</div>
-
-<p>&nbsp;</p>
-
-<div align="center">
     <h3> Contribution Instructions </h3> Fork the repo
     <br> Go to <code>docs/guidelines.md</code>
     <br> Make your edit, push to a new branch & send a pull request
