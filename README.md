@@ -47,6 +47,7 @@ ____Abstraction is Chaos Concealed by Confusion____
 • **Documentation Guideline:** An attempt to streamline API documentation
 </p>
 
+<p>&nbsp;</p>
 
 <div align="center">
     <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
