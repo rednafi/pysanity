@@ -730,7 +730,6 @@ from functools import partial, wraps
 
 
 def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=False):
-
     """Retry decorator with exponential backoff.
     
     Parameters
