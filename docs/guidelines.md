@@ -731,7 +731,6 @@ from functools import partial, wraps
 
 def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=False):
     """Retry decorator with exponential backoff.
-    
     Parameters
     ----------
     func : typing.Callable, optional
@@ -753,7 +752,7 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
     Examples
     --------
     >>> import random
-    >>> @retry(Exception, n_tries=4)
+    >>> @retry(exception=Exception, n_tries=4)
     ... def test_random(text):
     ...    x = random.random()
     ...    if x < 0.5:
@@ -766,8 +765,8 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
     if func is None:
         return partial(
             retry,
-            which_exception=exception,
-            try_count=n_tries,
+            exception=exception,
+            n_tries=n_tries,
             delay=delay,
             backoff=backoff,
             logger=logger,
@@ -789,8 +788,9 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
                 time.sleep(ndelay)
                 ntries -= 1
                 ndelay *= backoff
-                
+
         return func(*args, **kwargs)
+
     return wrapper
   ```
 
