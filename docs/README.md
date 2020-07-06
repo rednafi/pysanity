@@ -544,68 +544,30 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
 * Define a basic logging class
 
-   ```python
-       # __init__.py
-       # demo of a global logger that can be called and used anywhere in your package
+    ```python
+    # __init__.py
+    # demo of a global logger that can be called and used anywhere in your package
 
-       import logging
+    import logging
 
-       logging.getLogger(__name__)
+    logging.getLogger(__name__)
 
-       logging.basicConfig(
-           level=logging.INFO,
-           format="\n(asctime)s [%(levelname)s] %(message)s",
-           handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
-       )
-       ```
+    logging.basicConfig(
+        level=logging.INFO,
+        format="\n(asctime)s [%(levelname)s] %(message)s",
+        handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
+    )
+    ```
 
    * Import and use it like this
 
-       ```python
-       # mod.py
-       # using the logging class defined in __init__.py
+    ```python
+    # mod.py
+    # using the logging class defined in __init__.py
 
-       from . import logging
+    from . import logging
 
-       def dumb_div(a):
-           try:
-               res = a // 0
-           except ValueError:
-               res = a // 1
-           except Exception:
-               logging.exception("Exception Occured")
-               res = None
-
-           return res
-
-       dumb_div(5)
-       ```
-    * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
-
-      ```python
-      # __init__.py
-
-      import logging
-      import sentry_sdk
-      from sentry_sdk.integrations.logging import LoggingIntegration
-
-      sentry_logging = LoggingIntegration(
-          level=logging.INFO,  # Capture info and above as breadcrumbs
-          event_level=logging.ERROR,  # Send errors as events
-      )
-      sentry_sdk.init(
-          dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
-          integrations=[sentry_logging],
-      )
-   ```
-
-   ```python
-   # mod.py
-   # using the sentry logging class defined in __init__.py
-
-   from . import logging
-
-   def dumb_div(a):
+    def dumb_div(a):
         try:
             res = a // 0
         except ValueError:
@@ -617,7 +579,46 @@ On top of that functional programming is also a way to think. Avoiding side effe
         return res
 
     dumb_div(5)
-   ```
+    ```
+
+    * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
+
+    ```python
+    # __init__.py
+
+    import logging
+    import sentry_sdk
+    from sentry_sdk.integrations.logging import LoggingIntegration
+
+    sentry_logging = LoggingIntegration(
+        level=logging.INFO,  # Capture info and above as breadcrumbs
+        event_level=logging.ERROR,  # Send errors as events
+    )
+    sentry_sdk.init(
+        dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
+        integrations=[sentry_logging],
+    )
+    ```
+
+    ```python
+    # mod.py
+    # using the sentry logging class defined in __init__.py
+
+    from . import logging
+
+    def dumb_div(a):
+            try:
+                res = a // 0
+            except ValueError:
+                res = a // 1
+            except Exception:
+                logging.exception("Exception Occured")
+                res = None
+
+            return res
+
+        dumb_div(5)
+    ```
 
  * In some cases you'll want to decouple exception handling and logger logics from your core logic. You can use Python's context manager decorator to achieve that.
 
@@ -880,6 +881,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 * Examples should be given in REPL style
 
     ```python
+    """
     Examples
     --------
     >>> dumb_add(1, 2, 3, 4, 5)
@@ -889,6 +891,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 
     >>> dumb_add(6, 7, 8, 9, 10)
     40
+    """
     ```
 
 * Single line docstring.
@@ -951,4 +954,4 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 * [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
 
 
-<Footer/>
+
