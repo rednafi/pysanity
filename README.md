@@ -7,7 +7,7 @@
 
 <span align="center">
 <pre>
-<a href="https://github.com/rednafi/pysanity"><img src="https://raw.githubusercontent.com/rednafi/pysanity/master/imgs/logo.png" height="450" width="450" align="center"/></a>
+<a href="https://github.com/rednafi/pysanity"><img src="https://user-images.githubusercontent.com/30027932/86592037-7ff4f580-bfb4-11ea-86b9-077ebe2ae801.png" height="450" width="450" align="center"/></a>
 
 <h3>````¯¯¯¯\____<b>philosophy____</b>/¯¯¯¯````</h3>
 <h3>
