@@ -906,59 +906,15 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 
 
 ## References
-1. [The Most Diabolical Python Antipattern - Real Python](https://realpython.com/the-most-diabolical-python-antipattern/)
-2. [Flask Project Structure - Explore Flask](https://exploreflask.com/en/latest/blueprints.html#divisional)
-3. [Python Style Guide -Kengz](https://github.com/kengz/python)
-4. [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
-5. [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
-6. [Code Style, Hitchhiker's Guide to Python - Kenneth Reitz](https://docs.python-guide.org/writing/style/)
-7. [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
-8. [Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?](https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3)
-9. [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
-10. [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
-11. [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
 
-
-
-
-
-
-
-Build and Deploy / build-and-deploy
-failed 1 minute ago in 55s
-Search logs
-  Set up job2s
-  Build jenkey2011/vuepress-deploy@master15s
-  Checkout0s
-  vuepress-deploy38s
-/entrypoint.sh: cd: line 14: can't cd to blog/.vuepress/dist/: No such file or directory
-info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
-info fsevents@2.1.3: The platform "linux" is incompatible with this module.
-info "fsevents@2.1.3" is an optional dependency and failed compatibility check. Excluding it from installation.
-[3/4] Linking dependencies...
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 15.69s.
-yarn run v1.12.3
-$ vuepress build docs
-wait Extracting site metadata...
-tip Apply theme @vuepress/theme-default ...
-tip Apply plugin container (i.e. "vuepress-plugin-container") ...
-tip Apply plugin @vuepress/last-updated (i.e. "@vuepress/plugin-last-updated") ...
-tip Apply plugin @vuepress/register-components (i.e. "@vuepress/plugin-register-components") ...
-tip Apply plugin @vuepress/active-header-links (i.e. "@vuepress/plugin-active-header-links") ...
-tip Apply plugin @vuepress/search (i.e. "@vuepress/plugin-search") ...
-tip Apply plugin @vuepress/nprogress (i.e. "@vuepress/plugin-nprogress") ...
-tip Apply plugin @vuepress/back-to-top (i.e. "@vuepress/plugin-back-to-top") ...
-tip Apply plugin @vuepress/medium-zoom (i.e. "@vuepress/plugin-medium-zoom") ...
-[info] [webpackbar] Compiling Client
-[info] [webpackbar] Compiling Server
-[success] [webpackbar] Server: Compiled successfully in 8.75s
-[success] [webpackbar] Client: Compiled successfully in 13.23s
-wait Rendering static HTML...
-success Generated static files in docs/.vuepress/dist.
-
-Done in 15.35s.
-Build success
-==> Changing directory to 'blog/.vuepress/dist/' ...
-/entrypoint.sh: cd: line 14: can't cd to blog/.vuepress/dist/: No such file or directory
+* [The Most Diabolical Python Antipattern - Real Python](https://realpython.com/the-most-diabolical-python-antipattern/)
+* [Flask Project Structure - Explore Flask](https://exploreflask.com/en/latest/blueprints.html#divisional)
+* [Python Style Guide -Kengz](https://github.com/kengz/python)
+* [Django Style Guide](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+* [Write Better Python Functions - Jeff Knupp](https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/)
+* [Code Style, Hitchhiker's Guide to Python - Kenneth Reitz](https://docs.python-guide.org/writing/style/)
+* [Primer on Python Decorators - Real Python](https://realpython.com/primer-on-python-decorators/)
+* [Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?](https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3)
+* [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
+* [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
+* [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
