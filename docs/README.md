@@ -11,7 +11,7 @@ heroImage: https://v1.vuepress.vuejs.org/hero.png
 #   details: Feature 2 Description
 # - title: Feature 3 Title
 #   details: Feature 3 Description
-footer: Made by  with ❤️
+footer: Made by  with ❤️ by Redowan Delowar
 sidebarDepth: 4
 ---
 
@@ -888,7 +888,7 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
             [description]
         """
     ```
-    
+
 * Examples should be given in REPL style
 
     ```python
@@ -961,3 +961,6 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 * [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
 * [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
 * [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
+
+
+<Footer/>
