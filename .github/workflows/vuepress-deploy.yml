@@ -7,14 +7,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
+        with:
+          persist-credentials: false
 
-    - name: Build and Deploy
-      uses: grasilife/github-pages-deploy-action@master
-      env:
+    - name:  Install and Build 🔧
+      run: npm install && npm run build
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: dev # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: dist # The folder the action should deploy.
-        BUILD_SCRIPT: npm install && npm run build # The build script the action should run prior to deploying.
+        FOLDER: docs/.vuepress/dist # The folder the action should deploy.
