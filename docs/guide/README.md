@@ -1,29 +1,8 @@
-# Contents
+---
+sidebarDepth: 4
+---
 
-   * [ Styling Guideline](#-styling-guideline)
-      * [Auto Formatters](#auto-formatters)
-      * [Whitespaces](#whitespaces)
-      * [Naming Conventions](#naming-conventions)
-   * [ Coding Guideline](#-coding-guideline)
-      * [Functions](#functions)
-      * [Imports](#imports)
-      * [Exception Handling](#exception-handling)
-      * [Functional Paradigm](#functional-paradigm)
-      * [Logging](#logging)
-      * [Patterns](#patterns)
-         * [Null Comparison](#null-comparison)
-         * [Decorators](#decorators)
-      * [Testing](#testing)
-      * [Flask](#flask)
-         * [Project Structure](#project-structure)
-   * [ Documentation Guideline](#-documentation-guideline)
-      * [Docstrings](#docstrings)
-   * [The Holy Grail of Being Pythonic](#the-holy-grail-of-being-pythonic)
-   * [References](#references)
-
-<div class align="center">
-<h1> Styling Guideline</h1>
-</div>
+# Pysanity
 
 ## Auto Formatters
 
@@ -53,10 +32,8 @@
 
     => Black is not compatible with isort. So it's better to run black after running isort.
 
-[**⇑ back to top**](#contents)
 
-
-## Whitespaces
+### Whitespaces
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
 
     ```python
@@ -73,9 +50,8 @@
     ∙∙∙∙return bar
     ```
 
-[**⇑ back to top**](#contents)
 
-## Naming Conventions
+### Naming Conventions
 
 * Use *snake_case* when naming **variables**, **functions**, and **instances**. Use it for *file names* too as they will be used in imports.
 
@@ -226,14 +202,9 @@ or what data type an object is. Use `description_object` instead of `object_desc
         add_item(book)
     ```
 
-[**⇑ back to top**](#contents)
+## Coding Guideline
 
-<div class align="center">
-<h1> Coding Guideline
-</h1>
-</div>
-
-## Functions
+### Functions
 
 * Avoid mutable data types as default function/method aruments.
 
@@ -353,9 +324,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     **Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
 
- [**⇑back to top**](#contents)
 
-## Imports
+### Imports
 
 * Do not use wild card import
 
@@ -406,9 +376,8 @@ or what data type an object is. Use `description_object` instead of `object_desc
     from package1.module2 import func
     ```
 
-[**⇑ back to top**](#contents)
 
-## Exception Handling
+### Exception Handling
 
 * Do not write bare try-except block
 
@@ -451,9 +420,9 @@ or what data type an object is. Use `description_object` instead of `object_desc
     except Exception:
         logging.exception("Caught an error", exec_info=True)
     ```
-[**⇑ back to top**](#contents)
 
-## Functional Paradigm
+
+### Functional Paradigm
 
 Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
 
@@ -543,9 +512,9 @@ On top of that functional programming is also a way to think. Avoiding side effe
     # >> 15
     ```
 
-[**⇑ back to top**](#contents)
 
-## Logging
+
+### Logging
 * Instantiate your logger in your package's `__init__.py` module. See how it's done in `requests` library [here.](https://github.com/kennethreitz/requests)
 
 * Define a basic logging class
@@ -663,11 +632,11 @@ On top of that functional programming is also a way to think. Avoiding side effe
     └── mod.py
     ```
 
-[**⇑ back to top**](#contents)
 
-## Patterns
 
-### Null Comparison
+### Patterns
+
+#### Null Comparison
 * As PEP8 suggests, comparisons to singletons like `None` should always be done with `is` or `is not`, never the equality (`=` / `!=`) operators.
 
     **Why:** The `==` operator compares the values of both the operands and checks for value equality. Whereas `is` operator checks whether both the operands refer to the same object or not.
@@ -689,7 +658,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
         # ...
     ```
 
-### Decorators
+#### Decorators
 Instead of directly changing the source code, when possible, use [decorators](https://realpython.com/primer-on-python-decorators/) to change or monitor function/methods. Follow [this](https://stackoverflow.com/a/39335652/8963300) style taken from David Beazly's [Python Cookbook](https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/) to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter.
 
 ```python
@@ -731,7 +700,7 @@ from functools import partial, wraps
 
 def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=False):
     """Retry decorator with exponential backoff.
-    
+
     Parameters
     ----------
     func : typing.Callable, optional
@@ -795,9 +764,9 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
     return wrapper
   ```
 
-[**⇑ back to top**](#contents)
 
-## Testing
+
+### Testing
 * Use [pytest](https://docs.pytest.org/en/latest/) to write your tests
 
 * Strive to write many small [pure](https://stackoverflow.com/a/47245930/8963300) and [idempotent](https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation) functions, and minimize where mutations occur.
@@ -816,11 +785,11 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
     assert len(result_list) > 0
     ```
 
-[**⇑ back to top**](#contents)
 
-## Flask
 
-### Project Structure
+### Flask
+
+#### Project Structure
 
 Try to follow **divisional structure** while designing your microservice APIs.
 Here's an example of divisional structure in a Flask project.
@@ -848,13 +817,12 @@ yourapp/
 
 Read more on divisional structure [here.](https://exploreflask.com/en/latest/blueprints.html#divisional)
 
-[**⇑ back to top**](#contents)
 
-<div class align="center">
-<h1> Documentation Guideline</h1>
-</div>
 
-## Docstrings
+
+## Documentation Guideline
+
+### Docstrings
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
 
     ```python
@@ -927,17 +895,17 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
             Prints Nietzsche's n times.
         """
     ```
-[**⇑ back to top**](#contents)
 
-# The Holy Grail of Being Pythonic
+
+## The Holy Grail of Being Pythonic
 * [Pythonic Code Review](https://access.redhat.com/blogs/766093/posts/2802001)
 * [Writing Great Code](https://www.oreilly.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html)
 * [PEP 8 — the Style Guide for Python Code](https://pep8.org/#overriding-principle)
 * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)
 
-[**⇑ back to top**](#contents)
 
-# References
+
+## References
 1. [The Most Diabolical Python Antipattern - Real Python](https://realpython.com/the-most-diabolical-python-antipattern/)
 2. [Flask Project Structure - Explore Flask](https://exploreflask.com/en/latest/blueprints.html#divisional)
 3. [Python Style Guide -Kengz](https://github.com/kengz/python)
@@ -949,5 +917,3 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 9. [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
 10. [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
 11. [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
-
-[**⇑ back to top**](#contents)
