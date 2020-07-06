@@ -32,7 +32,7 @@ module.exports = {
   themeConfig: {
     repo: "rednafi/pysanity",
     editLinks: true,
-    docsDir: "",
+    docsDir: "docs/",
     editLinkText: "",
     lastUpdated: true,
     nav: [
