@@ -47,7 +47,7 @@ module.exports = {
     //   }
     // ],
     sidebar: {
-      '/guide/': [
+      '/': [
         {
           title: 'Guide',
           collapsable: false,

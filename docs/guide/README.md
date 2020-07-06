@@ -27,13 +27,14 @@ sidebarDepth: 4
 
     package = Blueprint("package", __name__)
 
-    from . import views # isort:skip
+    from . import views  # isort:skip
     ```
 
     => Black is not compatible with isort. So it's better to run black after running isort.
 
 
 ### Whitespaces
+
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
 
     ```python
@@ -69,7 +70,7 @@ sidebarDepth: 4
     def this_is_a_function():
     ```
 
-* **Global constants**, that are usually defined on a module level, should be named in all captital letters with underscores separating words.
+* **Global constants**, that are usually defined on a module level, should be named in all capital letters with underscores separating the words.
 
     ```python
     # bad
@@ -78,6 +79,7 @@ sidebarDepth: 4
     # good
     GLOBAL_CONSTANT = 50
     ```
+
 * Use PascalCase only when naming **classes**.
 
     ```python
@@ -93,10 +95,12 @@ sidebarDepth: 4
 
     fact = ExampleDummyFactory()
     ```
+
 * Use underscores before private **attributes**, **methods**, **variables** and **functions**.
 
     ```python
     # private methods and attributes demo
+
 
     class SomeThing:
         """A class for demonstration."""
@@ -119,8 +123,10 @@ sidebarDepth: 4
     ```python
     # private function demo
 
+
     def _private_function():
         pass
+
 
     def public_function():
         # calling the private function
@@ -214,6 +220,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
         lst.append(val)
         return lst
 
+
     make_list(1)
     # => [1]
     make_list(2)
@@ -225,6 +232,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
             lst = []
         lst.append(val)
         return lst
+
 
     init_list(1)
     # >> [1]
@@ -244,6 +252,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
     # this function calculates multiple things and print them out at the same time
     # ideally these two responsibilities can be split into two functions
 
+
     def calculate_and_print_stats(list_of_numbers):
         total = sum(list_of_numbers)
         mean = statistics.mean(list_of_numbers)
@@ -261,6 +270,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
     # good
     # these two functions do the same things but each of them
     # only has a single responsibility
+
 
     def calculate_statistics(list_of_numbers):
         """Calculates arithmatic sum, mean, median and mode."""
@@ -297,6 +307,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
     ```
 
     This function takes in user input and is not idempotent.
+
     ```python
     def square_num():
         """Return number_entered_by_user ** 2."""
@@ -312,6 +323,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
     ```python
     a_variable = 0
+
 
     def square_num(number):
         """Idempotent but not pure."""
@@ -413,6 +425,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
     def get_number():
         return int("foo")
 
+
     try:
         x = get_number()
     except ValueError:
@@ -424,7 +437,7 @@ or what data type an object is. Use `description_object` instead of `object_desc
 
 ### Functional Paradigm
 
-Some people claim that Python is, at least partly, a functional language. However, BFDL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
+Some people claim that Python is, at least partly, a functional language. However, BDFL [disagrees](https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions). Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.
 
 However, Python has in fact, functional capabilities. This is because functions are first class citizens here. They are expressions which can be evaluated at runtime. They can be passed as argument and you can return them from other functions. They can 'remember' things in closure.
 
@@ -439,7 +452,9 @@ On top of that functional programming is also a way to think. Avoiding side effe
     div_zero = lambda x: x / 0
     div_zero(2)
     ```
+
     The traceback in this case looks like this:
+
     ```python
     Traceback (most recent call last):
         File "<stdin>", line 1, in <module>
@@ -448,25 +463,29 @@ On top of that functional programming is also a way to think. Avoiding side effe
     ```
 
 * Do not assign a lambda expression (flake8 will complain if do so). Define a normal function if the need arises.
+
     ```python
     # bad
     divider = lambda some_list: list(map(lambda n: n // 2, some_list))
 
-    divider([1,2,3])
+    divider([1, 2, 3])
     # >> [0, 1, 1]
 
     # good
     def divider(some_list):
-        return [x//2 for x in some_list]
+        return [x // 2 for x in some_list]
 
-    divider([1,2,3])
+
+    divider([1, 2, 3])
     # >> [0, 1, 1]
     ```
+
 * Limit your usage of `map`, `filter`, `reduce`.
 
     **Why:** In almost all cases, they can be replaced with `list comprehension` and built in functions.
 
     ==> **Map Alternative:**
+
     ```python
     # bad
     customers = ["Alice", "Bob", "Frank", "Ann"]
@@ -477,13 +496,14 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     # good
     customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = [ x[0] for x in customers ]
+    result = [x[0] for x in customers]
 
     print(result)
     # >> ['A', 'B', 'F', 'A']
     ```
 
     ==> **Filter Alternative:**
+
     ```python
     # bad
     customers = ["Alice", "Bob", "Frank", "Ann"]
@@ -494,84 +514,87 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     # good
     customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = [ x for x in customers if x[0] == "A" ]
+    result = [x for x in customers if x[0] == "A"]
 
     print(result)
     # >> ['Alice', 'Ann']
     ```
 
     ==> **Reduce Alternative:**
+
     ```python
     # bad
     from functools import reduce
+
     print(reduce(lambda x, y: x + y, range(1, 6)))
     # >> 15
 
     # good
-    print(sum(range(1,6)))
+    print(sum(range(1, 6)))
     # >> 15
     ```
 
 
 
 ### Logging
+
 * Instantiate your logger in your package's `__init__.py` module. See how it's done in `requests` library [here.](https://github.com/kennethreitz/requests)
 
 * Define a basic logging class
 
    ```python
-    # __init__.py
-    # demo of a global logger that can be called and used anywhere in your package
+       # __init__.py
+       # demo of a global logger that can be called and used anywhere in your package
 
-    import logging
+       import logging
 
-    logging.getLogger(__name__)
+       logging.getLogger(__name__)
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format="\n(asctime)s [%(levelname)s] %(message)s",
-        handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
-    )
-    ```
+       logging.basicConfig(
+           level=logging.INFO,
+           format="\n(asctime)s [%(levelname)s] %(message)s",
+           handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
+       )
+       ```
 
-* Import and use it like this
+   * Import and use it like this
 
-    ```python
-    # mod.py
-    # using the logging class defined in __init__.py
+       ```python
+       # mod.py
+       # using the logging class defined in __init__.py
 
-    from . import logging
+       from . import logging
 
-    def dumb_div(a):
-        try:
-            res = a // 0
-        except ValueError:
-            res = a // 1
-        except Exception:
-            logging.exception("Exception Occured")
-            res = None
+       def dumb_div(a):
+           try:
+               res = a // 0
+           except ValueError:
+               res = a // 1
+           except Exception:
+               logging.exception("Exception Occured")
+               res = None
 
-        return res
+           return res
 
-    dumb_div(5)
-    ```
- * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
+       dumb_div(5)
+       ```
+    * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
 
-   ```python
-   # __init__.py
+      ```python
+      # __init__.py
 
-   import logging
-   import sentry_sdk
-   from sentry_sdk.integrations.logging import LoggingIntegration
+      import logging
+      import sentry_sdk
+      from sentry_sdk.integrations.logging import LoggingIntegration
 
-   sentry_logging = LoggingIntegration(
-       level=logging.INFO,  # Capture info and above as breadcrumbs
-       event_level=logging.ERROR,  # Send errors as events
-   )
-   sentry_sdk.init(
-       dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
-       integrations=[sentry_logging],
-   )
+      sentry_logging = LoggingIntegration(
+          level=logging.INFO,  # Capture info and above as breadcrumbs
+          event_level=logging.ERROR,  # Send errors as events
+      )
+      sentry_sdk.init(
+          dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
+          integrations=[sentry_logging],
+      )
    ```
 
    ```python
@@ -593,11 +616,13 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     dumb_div(5)
    ```
+
  * In some cases you will want to decouple exception handling and logger logics from your core logic. You can use Python's context manager decorator to achieve that.
 
     ```python
     from . import logging
     from contextlib import contextmanager
+
 
     class Calculation:
         """Dummy class for demonstrating exception decoupling with contextmanager."""
@@ -637,6 +662,7 @@ On top of that functional programming is also a way to think. Avoiding side effe
 ### Patterns
 
 #### Null Comparison
+
 * As PEP8 suggests, comparisons to singletons like `None` should always be done with `is` or `is not`, never the equality (`=` / `!=`) operators.
 
     **Why:** The `==` operator compares the values of both the operands and checks for value equality. Whereas `is` operator checks whether both the operands refer to the same object or not.
@@ -659,10 +685,12 @@ On top of that functional programming is also a way to think. Avoiding side effe
     ```
 
 #### Decorators
+
 Instead of directly changing the source code, when possible, use [decorators](https://realpython.com/primer-on-python-decorators/) to change or monitor function/methods. Follow [this](https://stackoverflow.com/a/39335652/8963300) style taken from David Beazly's [Python Cookbook](https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/) to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter.
 
 ```python
 from functools import partial, wraps
+
 
 def decorator(func=None, foo="spam"):
     if func is None:
@@ -683,6 +711,7 @@ This can be used with or without parameters.
 @decorator
 def f(*args, **kwargs):
     pass
+
 
 # applying decorator with extra parameter
 @decorator(foo="buzz")
@@ -767,13 +796,14 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
 
 
 ### Testing
+
 * Use [pytest](https://docs.pytest.org/en/latest/) to write your tests
 
 * Strive to write many small [pure](https://stackoverflow.com/a/47245930/8963300) and [idempotent](https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation) functions, and minimize where mutations occur.
 
 * Whenever you fix a bug, write a regression test. A bug fixed without a regression test is almost certainly going to break again in the future.
 
-* Use direct assertations and explicit comparisons; avoid negations.
+* Use direct assertions and explicit comparisons; avoid negations.
 
     ```python
     # bad - other values can be falsy too: `[], 0, '', None`
@@ -818,11 +848,10 @@ yourapp/
 Read more on divisional structure [here.](https://exploreflask.com/en/latest/blueprints.html#divisional)
 
 
-
-
 ## Documentation Guideline
 
 ### Docstrings
+
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
 
     ```python
@@ -861,12 +890,14 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
     >>> dumb_add(6, 7, 8, 9, 10)
     40
     ```
+
 * Single line docstring.
 
     ```python
     def dumb_sub(num1, num0):
         """Subtracting num0 from num1."""
     ```
+
 * Inline comments should start with lowercase letter.
 
     ```python
@@ -898,11 +929,11 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 
 
 ## The Holy Grail of Being Pythonic
+
 * [Pythonic Code Review](https://access.redhat.com/blogs/766093/posts/2802001)
 * [Writing Great Code](https://www.oreilly.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html)
 * [PEP 8 — the Style Guide for Python Code](https://pep8.org/#overriding-principle)
 * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)
-
 
 
 ## References
