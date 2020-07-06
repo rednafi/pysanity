@@ -1,6 +1,6 @@
 <div align="center">
     <h1> PySanity </h1>
-    <h4> <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> Python Coding Guidelines for Sanity </a> </h4>
+    <h4> <a href="https://pysanity.netlify.app"> Python Coding Guidelines for Sanity </a> </h4>
 </div>
 
 <div align="center">
@@ -50,7 +50,7 @@ ____Abstraction is Chaos, Concealed by Confusion____
 <p>&nbsp;</p>
 
 <div align="center">
-    <h3> Read the guideline <a href="https://pysanity.netlify.app"> here. </a></h3>
+    <h3> Read the guideline <a href="https://github.com/rednafi/pysanity/blob/master/docs/guidelines.md"> here. </a></h3>
 </div>
 
 <p>&nbsp;</p>
