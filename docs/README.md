@@ -12,429 +12,439 @@ sidebarDepth: 4
 * Use [flake8](https://github.com/PyCQA/flake8) to catch linting errors.
 * Use [isort](https://github.com/timothycrosley/isort) to sort the imports.
 
-    => However, be careful while sorting imports of application modules. It might accidentally add circular dependencies. For example in Flask applications, changing the import order in flask `app/package/__init__.py` can mess up the codebase.
+:::warning
 
-    ```python
-    from flask import Blueprint
+However, be careful while sorting imports of application modules. It might accidentally add circular dependencies. For example in Flask applications, changing the import order in flask `app/package/__init__.py` can mess up the codebase.
 
-    package = Blueprint("package", __name__)
+:::
 
-    from . import views
-    ```
+```python
+from flask import Blueprint
 
-    To avoid this, add `# isort:skip` like this:
+package = Blueprint("package", __name__)
 
-    ```python
-    from flask import Blueprint
+from . import views
+```
 
-    package = Blueprint("package", __name__)
+To avoid this, add `# isort:skip` like this:
 
-    from . import views  # isort:skip
-    ```
+```python
+from flask import Blueprint
 
-    => `Black` isn't compatible with `isort`. So it's better to run black after running isort.
+package = Blueprint("package", __name__)
 
+from . import views  # isort:skip
+```
+
+::: tip
+
+`Black` isn't compatible with `isort`. So it's better to run black after running isort.
+
+:::
 
 ### Whitespaces
 
 * Use soft tabs (space character) set to 4 spaces as per PEP8.
 
-    ```python
-    # don't
-    def foo():
-    ∙∙return bar
+```python
+# don't
+def foo():
+∙∙return bar
 
-    # don't
-    def foo():
-    ∙return bar
+# don't
+def foo():
+∙return bar
 
-    # do
-    def foo():
-    ∙∙∙∙return bar
-    ```
+# do
+def foo():
+∙∙∙∙return bar
+```
 
 
 ### Naming Conventions
 
 * Use *snake_case* when naming **variables**, **functions**, and **instances**. Use it for *file names* too as they'll be used in imports.
 
-    ```python
-    # don't
-    import myMod
-    anOBJEct = {}
-    thisIsAnObject = {}
-    def ThisisAFunction():
+```python
+# don't
+import myMod
 
-    # do
-    import my_mod
-    anobject = {}
-    this_is_an_object = {}
-    def this_is_a_function():
-    ```
+anOBJEct = {}
+thisIsAnObject = {}
+def ThisisAFunction():
+    ...
+
+# do
+import my_mod
+
+anobject = {}
+this_is_an_object = {}
+def this_is_a_function():
+    ...
+```
 
 * **Global constants**, that are usually defined on a module level, should be named in all capital letters with underscores separating the words.
 
-    ```python
-    # don't
-    global_constant = 50
+```python
+# don't
+global_constant = 50
 
-    # do
-    GLOBAL_CONSTANT = 50
-    ```
+# do
+GLOBAL_CONSTANT = 50
+```
 
 * Use PascalCase only when naming **classes**.
 
-    ```python
-    # don't
-    class exampleDummyFactory():
-        # ...
+```python
+# don't
+class exampleDummyFactory():
+    # ...
 
-    fact = exampleDummyFactory()
+fact = exampleDummyFactory()
 
-    # do
-    class ExampleDummyFactory():
-        # ...
+# do
+class ExampleDummyFactory():
+    # ...
 
-    fact = ExampleDummyFactory()
-    ```
+fact = ExampleDummyFactory()
+```
 
 * Use underscores before private **attributes**, **methods**, **variables** and **functions**.
 
-    ```python
-    # private methods and attributes demo
+```python
+# private methods and attributes demo
 
 
-    class SomeThing:
-        """A class for demonstration."""
+class SomeThing:
+    """A class for demonstration."""
 
-        def __init__(self):
-            # private attribute
-            self._private_att = 10
+    def __init__(self):
+        # private attribute
+        self._private_att = 10
 
-        def _private_method(self):
-            """This is a private method."""
-            pass
-
-        def method_x(self):
-            # using the private attribute
-            res_private_att = self._private_att
-            # calling the private method
-            res_private_method = self._private_method()
-    ```
-
-    ```python
-    # private function demo
-
-
-    def _private_function():
+    def _private_method(self):
+        """This is a private method."""
         pass
 
+    def method_x(self):
+        # using the private attribute
+        res_private_att = self._private_att
+        # calling the private method
+        res_private_method = self._private_method()
+```
 
-    def public_function():
-        # calling the private function
-        res_private_function = _private_function()
-    ```
+```python
+# private function demo
 
+
+def _private_function():
+    pass
+
+
+def public_function():
+    # calling the private function
+    res_private_function = _private_function()
+```
 
 * Avoid single letter names. Use descriptive and meaningful names - tell what the function does,
 or what data type an object is. Use `description_object` instead of `object_description`.
 
-    ```python
-    # don't
-    def a():
-        # ...
+```python
+# don't
+def a():
+    # ...
 
-    # do
-    def analogy():
-        # ...
+# do
+def analogy():
+    # ...
 
-    # don't - no convention to know what data type it's
-    df_raw_data = pd.DataFrame(raw_data)
-    id_dct_num = {"a": 1, "b": 2}
+# don't - no convention to know what data type it's
+df_raw_data = pd.DataFrame(raw_data)
+id_dct_num = {"a": 1, "b": 2}
 
-    # do - convention to tell data type by the last term
-    raw_data_df = pd.DataFrame(raw_data)
-    id_num_dct = {"a": 1, "b": 2}
+# do - convention to tell data type by the last term
+raw_data_df = pd.DataFrame(raw_data)
+id_num_dct = {"a": 1, "b": 2}
 
-    # don't - meaningless names, lost context
-    LIST_1 = ["Jack", "Alice", "Emily"]
-    # ... many lines of code later
-    for item in LIST_1:
-        add_person(item)
+# don't - meaningless names, lost context
+LIST_1 = ["Jack", "Alice", "Emily"]
+# ... many lines of code later
+for item in LIST_1:
+    add_person(item)
 
-    # do
-    NAME_LIST = ["Jack", "Alice", "Emily"]
-    # ... many lines of code later
-    for name in NAME_LIST:
-        add_person(name)
-    ```
+# do
+NAME_LIST = ["Jack", "Alice", "Emily"]
+# ... many lines of code later
+for name in NAME_LIST:
+    add_person(name)
+```
 
 * Use singular or base words in naming; avoid using plural and instead append singular with the data type.
 
-    ```python
-    # don't
-    def moves_object(x, y):
-        # ...
+```python
+# don't
+def moves_object(x, y):
+    # ...
 
-    # do
-    def move_object(x, y):
-        # ...
+# do
+def move_object(x, y):
+    # ...
 
-    # don't - inconsistent naming for same data type and usage
-    teacher = ["Michael"]
-    students = ["Jack", "Alice", "Emily"]
-    books = pd.DataFrame({"title": ["lorem", "ipsum"]})
+# don't - inconsistent naming for same data type and usage
+teacher = ["Michael"]
+students = ["Jack", "Alice", "Emily"]
+books = pd.DataFrame({"title": ["lorem", "ipsum"]})
 
-    for t in teacher:
-        add_human(t)
+for t in teacher:
+    add_human(t)
 
-    for student in students:
-        add_human(student)
+for student in students:
+    add_human(student)
 
-    for book in books:
-        add_item(book) # wrong; iterate column name instead of book
+for book in books:
+    add_item(book) # wrong; iterate column name instead of book
 
-    # do
-    teacher_list = ["Michael"]
-    student_list = ["Jack", "Alice", "Emily"]
-    book_df = pd.DataFrame({"title": ["lorem", "ipsum"]})
+# do
+teacher_list = ["Michael"]
+student_list = ["Jack", "Alice", "Emily"]
+book_df = pd.DataFrame({"title": ["lorem", "ipsum"]})
 
-    for teacher in teacher_list:
-        add_human(teacher)
+for teacher in teacher_list:
+    add_human(teacher)
 
-    for student in student_list:
-        add_human(student)
+for student in student_list:
+    add_human(student)
 
-    # naming as df suggests it'll be treated as a dataframe
-    for idx, book in book_df.iterrow():
-        add_item(book)
-    ```
+# naming as df suggests it'll be treated as a dataframe
+for idx, book in book_df.iterrow():
+    add_item(book)
+```
 
 ## Coding Guideline
 
 ### Functions
 
-* Avoid mutable data types as default function/method aruments.
+* Avoid mutable data types as default function/method arguments.
 
-    ```python
-    # don't
-    def make_list(val, lst=[]):
-        lst.append(val)
-        return lst
-
-
-    make_list(1)
-    # => [1]
-    make_list(2)
-    # => [1, 2], instead of the new init [2]
-
-    # do
-    def make_list(val, lst=None):
-        if lst is None:
-            lst = []
-        lst.append(val)
-        return lst
+```python
+# don't
+def make_list(val, lst=[]):
+    lst.append(val)
+    return lst
 
 
-    init_list(1)
-    # >> [1]
+make_list(1)
+# => [1]
+make_list(2)
+# => [1, 2], instead of the new init [2]
 
-    init_list(2)
-    # >> [2]
-    ```
+# do
+def make_list(val, lst=None):
+    if lst is None:
+        lst = []
+    lst.append(val)
+    return lst
 
-*  Robert C. Martin's [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) encourages that a function should only have a single responsibility. That means, it should do one thing and one thing only. It massively improves refactorability.
+
+init_list(1)
+# >> [1]
+
+init_list(2)
+# >> [2]
+```
+
+* Robert C. Martin's [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle) encourages that a function should only have a single responsibility. That means, it should do one thing and one thing only. It massively improves refactorability.
 
     ==> There can be only one reason ever to change the function: if the way in which it does that thing must change.
 
     ==> It also becomes clear when a function can be deleted: if, when making changes elsewhere, it becomes clear the function's single responsibility is no longer needed, simply remove it.
 
-    ```python
-    # don't
-    # this function calculates multiple things and print them out at the same time
-    # ideally these two responsibilities can be split into two functions
+```python
+# don't
+# this function calculates multiple things and print them out at the same time
+# ideally these two responsibilities can be split into two functions
 
 
-    def calculate_and_print_stats(list_of_numbers):
-        total = sum(list_of_numbers)
-        mean = statistics.mean(list_of_numbers)
-        median = statistics.median(list_of_numbers)
-        mode = statistics.mode(list_of_numbers)
+def calculate_and_print_stats(list_of_numbers):
+    total = sum(list_of_numbers)
+    mean = statistics.mean(list_of_numbers)
+    median = statistics.median(list_of_numbers)
+    mode = statistics.mode(list_of_numbers)
 
-        print("-----------------Stats-----------------")
-        print(f"SUM: {total}")
-        print(f"MEAN: {mean}")
-        print(f"MEDIAN: {median}")
-        print(f"MODE: {mode}")
-    ```
+    print("-----------------Stats-----------------")
+    print(f"SUM: {total}")
+    print(f"MEAN: {mean}")
+    print(f"MEDIAN: {median}")
+    print(f"MODE: {mode}")
+```
 
-    ```python
-    # do
-    # these two functions do the same things but each of them
-    # only has a single responsibility
-
-
-    def calculate_statistics(list_of_numbers):
-        """Calculates arithmatic sum, mean, median and mode."""
-
-        total = sum(list_of_numbers)
-        mean = statistics.mean(list_of_numbers)
-        median = statistics.median(list_of_numbers)
-        mode = statistics.mode(list_of_numbers)
-
-        return total, mean, median, mode
+```python
+# do
+# these two functions do the same things but each of them
+# only has a single responsibility
 
 
-    def print_statistics(total, mean, median, mode):
-        """Prints statistics on the console."""
+def calculate_statistics(list_of_numbers):
+    """Calculates arithmatic sum, mean, median and mode."""
 
-        print("-----------------Stats-----------------")
-        print(f"SUM: {total}")
-        print(f"MEAN: {mean}")
-        print(f"MEDIAN: {median}")
-        print(f"MODE: {mode}")
-    ```
+    total = sum(list_of_numbers)
+    mean = statistics.mean(list_of_numbers)
+    median = statistics.median(list_of_numbers)
+    mode = statistics.mode(list_of_numbers)
+
+    return total, mean, median, mode
+
+
+def print_statistics(total, mean, median, mode):
+    """Prints statistics on the console."""
+
+    print("-----------------Stats-----------------")
+    print(f"SUM: {total}")
+    print(f"MEAN: {mean}")
+    print(f"MEDIAN: {median}")
+    print(f"MODE: {mode}")
+```
 
 * Strive to write **pure** or at least **idempotent** functions as much as possible.
 
-    ==> **An idempotent function** always returns the same value given the same set of arguments, regardless of how many times it's called. The result does not depend on non-local variables, the mutability of arguments, or data from any I/O streams.
+==> **An idempotent function** always returns the same value given the same set of arguments, regardless of how many times it's called. The result does not depend on non-local variables, the mutability of arguments, or data from any I/O streams.
 
-    The following function is idempotent. The result of `square_num(5)` is always going to return `25`, regardless of how many times it's called:
+The following function is idempotent. The result of `square_num(5)` is always going to return `25`, regardless of how many times it's called:
 
-    ```python
-    def square_num(number):
-        """This is an idempotent function."""
+```python
+def square_num(number):
+    """This is an idempotent function."""
 
-        return number ** 2
-    ```
+    return number ** 2
+```
 
-    This function takes in user input and is not idempotent.
+This function takes in user input and is not idempotent.
 
-    ```python
-    def square_num():
-        """Return number_entered_by_user ** 2."""
+```python
+def square_num():
+    """Return number_entered_by_user ** 2."""
 
-        number = int(input("Enter a number: "))
-        return number ** 2
-    ```
+    number = int(input("Enter a number: "))
+    return number ** 2
+```
 
-    **Why:**
-    Idempotent functions are easy to test because they're guaranteed to always return the same result when called with the same arguments. Testing is simply a matter of checking that the value returned by various different calls to the function return the expected value.
+**Why:**
+Idempotent functions are easy to test because they're guaranteed to always return the same result when called with the same arguments. Testing is simply a matter of checking that the value returned by various different calls to the function return the expected value.
 
-    ==> **A function is considered pure** if it's both idempotent and has no observable side effects. For example, if the idempotent version of square_func(number)above printed the result before returning it or mutated a variable outside of the function scope, it's still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.
+==> **A function is considered pure** if it's both idempotent and has no observable side effects. For example, if the idempotent version of square_func(number)above printed the result before returning it or mutated a variable outside of the function scope, it's still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.
 
-    ```python
-    a_variable = 0
+```python
+a_variable = 0
 
 
-    def square_num(number):
-        """Idempotent but not pure."""
+def square_num(number):
+    """Idempotent but not pure."""
 
-        sq_num = number ** 2
-        a_variable += square_num
+    sq_num = number ** 2
+    a_variable += square_num
 
-        return sq_num
-    ```
+    return sq_num
+```
 
-    **Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
+**Why:** Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.
 
 
 ### Imports
 
 * Don't use wild card import
 
-    ```python
-    # don't
-    from mod import *
-    from package.mod import *
+```python
+# don't
+from mod import *
+from package.mod import *
 
-    # do
-    from mod import func_0
-    from package.mod import func_1
-    ```
+# do
+from mod import func_0
+from package.mod import func_1
+```
 
 * Don't import unused modules (Flake8 will point out unused imports, make sure you remove them before committing).
 
 * Sort the imports by import then from, and sort alphabetically (`isort` will automatically do this for you).
 
-    ```python
-    # don't
-    from a_mod import foo
-    import e_mod
-    import b_mod
-    from z_mod import bar, baz
+```python
+# don't
+from a_mod import foo
+import e_mod
+import b_mod
+from z_mod import bar, baz
 
-    # do
-    import b_mod
-    import e_mod
-    from a_mod import foo
-    from z_mod import bar, baz
-    ```
+# do
+import b_mod
+import e_mod
+from a_mod import foo
+from z_mod import bar, baz
+```
 
 * Use absolute imports in your production code. Relative imports can be messy, particularly for shared projects where directory structure is likely to change. Consider this directory structure:
 
-    ```bash
-    └── project
-    └── package1
-       ├── module1.py
-       └── module2.py
-    ```
+```bash
+└── project
+└── package1
+    ├── module1.py
+    └── module2.py
+```
 
-    ```python
-    # package1/module1
+```python
+# package1/module1
 
-    # don't
-    from .module2 import func
+# don't
+from .module2 import func
 
-    # do
-    from package1.module2 import func
-    ```
+# do
+from package1.module2 import func
+```
 
 
 ### Exception Handling
 
 * Don't write bare try-except block
 
-    ```python
-    # don't
-    try:
-        do_something()
-    except:
-        pass
+```python
+# don't
+try:
+    do_something()
+except:
+    pass
 
-    # don't
-    try:
-        do_something()
-    except Exception:
-        pass
-    ```
+# don't
+try:
+    do_something()
+except Exception:
+    pass
+```
 
-* In most cases, the caught exception type must be as specific as possible. Something like KeyError, or ConnectionTimeout, etc.
+In most cases, the caught exception type must be as specific as possible. Something like KeyError, or ConnectionTimeout, etc.
 
-    ```python
-    # do
-    try:
-        do_something()
-    # catch some very specific exception - KeyError, ValueError, etc.
-    except ValueError:
-        pass
-    ```
+```python
+# do
+try:
+    do_something()
+# catch some very specific exception - KeyError, ValueError, etc.
+except ValueError:
+    pass
+```
 
-* If some code path simply must broadly catch all exceptions - for example, the top-level loop for some long-running persistent process - then each such caught exception must write the full stack trace to a log or file, along with a timestamp. Not just the exception type and message, but the full stack trace.
+If some code path simply must broadly catch all exceptions - for example, the top-level loop for some long-running persistent process - then each such caught exception must write the full stack trace to a log or file, along with a timestamp. Not just the exception type and message, but the full stack trace.
 
-    ```python
-    # do
-    def get_number():
-        return int("foo")
+```python
+# do
+def get_number():
+    return int("foo")
 
 
-    try:
-        x = get_number()
-    except ValueError:
-        pass
-    except Exception:
-        logging.exception("Caught an error", exec_info=True)
-    ```
+try:
+    x = get_number()
+except ValueError:
+    pass
+except Exception:
+    logging.exception("Caught an error", exec_info=True)
+```
 
 
 ### Functional Paradigm
@@ -449,125 +459,164 @@ On top of that functional programming is also a way to think. Avoiding side effe
 
     **Why:** When error occurs in `lambda` expression, Python does not provide the function name in the traceback. Also, they're harder to read when the expression gets complicated.
 
-    ```python
-    # don't
-    div_zero = lambda x: x / 0
-    div_zero(2)
-    ```
+```python
+# don't
+div_zero = lambda x: x / 0
+div_zero(2)
+```
 
-    The traceback in this case looks like this:
+The traceback in this case looks like this:
 
-    ```python
-    Traceback (most recent call last):
-        File "<stdin>", line 1, in <module>
-        File "<stdin>", line 1, in <lambda>
-    ZeroDivisionError: division by zero
-    ```
+```python
+Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "<stdin>", line 1, in <lambda>
+ZeroDivisionError: division by zero
+```
 
 * Don't assign a lambda expression (flake8 will complain if do so). Define a normal function if the need arises.
 
-    ```python
-    # don't
-    divider = lambda some_list: list(map(lambda n: n // 2, some_list))
+```python
+# don't
+divider = lambda some_list: list(map(lambda n: n // 2, some_list))
 
-    divider([1, 2, 3])
-    # >> [0, 1, 1]
+divider([1, 2, 3])
+# >> [0, 1, 1]
 
-    # do
-    def divider(some_list):
-        return [x // 2 for x in some_list]
+# do
+def divider(some_list):
+    return [x // 2 for x in some_list]
 
 
-    divider([1, 2, 3])
-    # >> [0, 1, 1]
-    ```
+divider([1, 2, 3])
+# >> [0, 1, 1]
+```
 
 * Only use `map`, `filter`, `reduce` absolutely when you have to.
 
     **Why:** In almost all cases, they can be replaced with `list comprehension` and built in functions.
 
-    ==> **Map Alternative:**
+==> **Map Alternative:**
 
-    ```python
-    # don't
-    customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = map(lambda x: x[0], customers)
+```python
+# don't
+customers = ["Alice", "Bob", "Frank", "Ann"]
+result = map(lambda x: x[0], customers)
 
-    print(list(result))
-    # >> ['A', 'B', 'F', 'A']
+print(list(result))
+# >> ['A', 'B', 'F', 'A']
 
-    # do
-    customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = [x[0] for x in customers]
+# do
+customers = ["Alice", "Bob", "Frank", "Ann"]
+result = [x[0] for x in customers]
 
-    print(result)
-    # >> ['A', 'B', 'F', 'A']
-    ```
+print(result)
+# >> ['A', 'B', 'F', 'A']
+```
 
-    ==> **Filter Alternative:**
+==> **Filter Alternative:**
 
-    ```python
-    # don't
-    customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = filter(lambda x: x[0] == "A", customers)
+```python
+# don't
+customers = ["Alice", "Bob", "Frank", "Ann"]
+result = filter(lambda x: x[0] == "A", customers)
 
-    print(list(result))
-    # >> ['Alice', 'Ann']
+print(list(result))
+# >> ['Alice', 'Ann']
 
-    # do
-    customers = ["Alice", "Bob", "Frank", "Ann"]
-    result = [x for x in customers if x[0] == "A"]
+# do
+customers = ["Alice", "Bob", "Frank", "Ann"]
+result = [x for x in customers if x[0] == "A"]
 
-    print(result)
-    # >> ['Alice', 'Ann']
-    ```
+print(result)
+# >> ['Alice', 'Ann']
+```
 
-    ==> **Reduce Alternative:**
+==> **Reduce Alternative:**
 
-    ```python
-    # don't
-    from functools import reduce
+```python
+# don't
+from functools import reduce
 
-    print(reduce(lambda x, y: x + y, range(1, 6)))
-    # >> 15
+print(reduce(lambda x, y: x + y, range(1, 6)))
+# >> 15
 
-    # do
-    print(sum(range(1, 6)))
-    # >> 15
-    ```
+# do
+print(sum(range(1, 6)))
+# >> 15
+```
 
 
 
 ### Logging
 
-* Instantiate your logger in your package's `__init__.py` module. See how it's done in `requests` library [here.](https://github.com/kennethreitz/requests)
+Instantiate your logger in your package's `__init__.py` module. See how it's done in `requests` library [here.](https://github.com/kennethreitz/requests)
 
 * Define a basic logging class
 
-    ```python
-    # __init__.py
-    # demo of a global logger that can be called and used anywhere in your package
+```python
+# __init__.py
+# demo of a global logger that can be called and used anywhere in your package
 
-    import logging
+import logging
 
-    logging.getLogger(__name__)
+logging.getLogger(__name__)
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format="\n(asctime)s [%(levelname)s] %(message)s",
-        handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
-    )
-    ```
+logging.basicConfig(
+    level=logging.INFO,
+    format="\n(asctime)s [%(levelname)s] %(message)s",
+    handlers=[logging.FileHandler("packg/debug.log"), logging.StreamHandler()],
+)
+```
 
-   * Import and use it like this
+* Import and use it like this
 
-    ```python
-    # mod.py
-    # using the logging class defined in __init__.py
+```python
+# mod.py
+# using the logging class defined in __init__.py
 
-    from . import logging
+from . import logging
 
-    def dumb_div(a):
+def dumb_div(a):
+    try:
+        res = a // 0
+    except ValueError:
+        res = a // 1
+    except Exception:
+        logging.exception("Exception Occured")
+        res = None
+
+    return res
+
+dumb_div(5)
+```
+
+* For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
+
+```python
+# __init__.py
+
+import logging
+import sentry_sdk
+from sentry_sdk.integrations.logging import LoggingIntegration
+
+sentry_logging = LoggingIntegration(
+    level=logging.INFO,  # Capture info and above as breadcrumbs
+    event_level=logging.ERROR,  # Send errors as events
+)
+sentry_sdk.init(
+    dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
+    integrations=[sentry_logging],
+)
+```
+
+```python
+# mod.py
+# using the sentry logging class defined in __init__.py
+
+from . import logging
+
+def dumb_div(a):
         try:
             res = a // 0
         except ValueError:
@@ -579,113 +628,74 @@ On top of that functional programming is also a way to think. Avoiding side effe
         return res
 
     dumb_div(5)
-    ```
+```
 
-    * For logging in production applications, use [Sentry's Logging](https://docs.sentry.io/platforms/python/logging/). You can view your logs in the Sentry Dashboard.
+* In some cases you'll want to decouple exception handling and logger logics from your core logic. You can use Python's context manager decorator to achieve that.
 
-    ```python
-    # __init__.py
-
-    import logging
-    import sentry_sdk
-    from sentry_sdk.integrations.logging import LoggingIntegration
-
-    sentry_logging = LoggingIntegration(
-        level=logging.INFO,  # Capture info and above as breadcrumbs
-        event_level=logging.ERROR,  # Send errors as events
-    )
-    sentry_sdk.init(
-        dsn="<sign-up-for-sentry-and-you-will-get-your-dsn>",
-        integrations=[sentry_logging],
-    )
-    ```
-
-    ```python
-    # mod.py
-    # using the sentry logging class defined in __init__.py
-
-    from . import logging
-
-    def dumb_div(a):
-            try:
-                res = a // 0
-            except ValueError:
-                res = a // 1
-            except Exception:
-                logging.exception("Exception Occured")
-                res = None
-
-            return res
-
-        dumb_div(5)
-    ```
-
- * In some cases you'll want to decouple exception handling and logger logics from your core logic. You can use Python's context manager decorator to achieve that.
-
-    ```python
-    from . import logging
-    from contextlib import contextmanager
+```python
+from . import logging
+from contextlib import contextmanager
 
 
-    class Calculation:
-        """Dummy class for demonstrating exception decoupling with contextmanager."""
+class Calculation:
+    """Dummy class for demonstrating exception decoupling with contextmanager."""
 
-        def __init__(self, a, b):
-            self.a = a
-            self.b = b
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-        @contextmanager
-        def errorhandler(self):
-            try:
-                yield
-            except ZeroDivisionError:
-                print(
-                    f"Custom handling of Zero Division Error! Printing "
-                    "only 2 levels of traceback.."
-                )
-                logging.exception("ZeroDivisionError")
+    @contextmanager
+    def errorhandler(self):
+        try:
+            yield
+        except ZeroDivisionError:
+            print(
+                f"Custom handling of Zero Division Error! Printing "
+                "only 2 levels of traceback.."
+            )
+            logging.exception("ZeroDivisionError")
 
-        def main_func(self):
-            """Function that we want to save from nasty error handling logic."""
+    def main_func(self):
+        """Function that we want to save from nasty error handling logic."""
 
-            with self.errorhandler():
-                return self.a / self.b
-    ```
+        with self.errorhandler():
+            return self.a / self.b
+```
 
-    ```
-    # folder structure of the logging demo package
-    packg
-    ├── debug.log
-    ├── __init__.py
-    └── mod.py
-    ```
+```
+# folder structure of the logging demo package
+packg
+├── debug.log
+├── __init__.py
+└── mod.py
+```
 
 
 ### Patterns
 
 #### Null Comparison
 
-* As PEP8 suggests, comparisons to singletons like `None` should always be done with `is` or `is not`, never the equality (`=` / `!=`) operators.
+As PEP8 suggests, comparisons to singletons like `None` should always be done with `is` or `is not`, never the equality (`=` / `!=`) operators.
 
-    **Why:** The `==` operator compares the values of both the operands and checks for value equality. Whereas `is` operator checks whether both the operands refer to the same object or not.
+**Why:** The `==` operator compares the values of both the operands and checks for value equality. Whereas `is` operator checks whether both the operands refer to the same object or not.
 
-    ```python
-    # don't
-    if val == None:
-        # ...
+```python
+# don't
+if val == None:
+    # ...
 
-    if val != None:
-        # ...
-    ```
+if val != None:
+    # ...
+```
 
-    ```python
-    # do
-    if val is None:
-        # ...
+```python
+# do
+if val is None:
+    # ...
 
-    if val is not None:
-        # ...
-    ```
+if val is not None:
+    # ...
+```
 
 #### Decorators
 
@@ -794,7 +804,7 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
         return func(*args, **kwargs)
 
     return wrapper
-  ```
+```
 
 
 ### Testing
@@ -807,15 +817,15 @@ def retry(func=None, exception=Exception, n_tries=5, delay=5, backoff=1, logger=
 
 * Use direct assertions and explicit comparisons; avoid negations.
 
-    ```python
-    # don't - other values can be falsy too: `[], 0, '', None`
-    assert not result
-    assert result_list
+```python
+# don't - other values can be falsy too: `[], 0, '', None`
+assert not result
+assert result_list
 
-    # do
-    assert result == False
-    assert len(result_list) > 0
-    ```
+# do
+assert result == False
+assert len(result_list) > 0
+```
 
 ### Flask
 
@@ -854,81 +864,81 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 
 * Use [numpy](https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard) style docstring. This is a good format that uses extra vertical space for maximum readability.
 
-    ```python
-    def dumb_add(num0, num1, num2, num3, num4):
-        """[summary]
+```python
+def dumb_add(num0, num1, num2, num3, num4):
+    """[summary]
 
-        Parameters
-        ----------
-        num0 : [type]
-            [description]
-        num1 : [type]
-            [description]
-        num2 : [type]
-            [description]
-        num3 : [type]
-            [description]
-        num4 : [type]
-            [description]
+    Parameters
+    ----------
+    num0 : [type]
+        [description]
+    num1 : [type]
+        [description]
+    num2 : [type]
+        [description]
+    num3 : [type]
+        [description]
+    num4 : [type]
+        [description]
 
-        Returns
-        -------
-        [type]
-            [description]
-        """
-    ```
+    Returns
+    -------
+    [type]
+        [description]
+    """
+```
 
 * Examples should be given in REPL style
 
-    ```python
-    """
-    Examples
-    --------
-    >>> dumb_add(1, 2, 3, 4, 5)
-    15
+```python
+"""
+Examples
+--------
+>>> dumb_add(1, 2, 3, 4, 5)
+15
 
-    Comment explaining the second example
+Comment explaining the second example
 
-    >>> dumb_add(6, 7, 8, 9, 10)
-    40
-    """
-    ```
+>>> dumb_add(6, 7, 8, 9, 10)
+40
+"""
+```
 
 * Single line docstring.
 
-    ```python
-    def dumb_sub(num1, num0):
-        """Subtracting num0 from num1."""
-    ```
+```python
+def dumb_sub(num1, num0):
+    """Subtracting num0 from num1."""
+```
 
 * Inline comments should start with lowercase letter.
 
-    ```python
-    # going through the student list
-    for idx, student in enumerate(students_list):
-        ...
-    ```
+```python
+# going through the student list
+for idx, student in enumerate(students_list):
+    ...
+```
 
 * In case of documenting classes, you should mention the methods and attributes like this. The methods should be documented like the functions.
 
-    ```python
-    class Dummy(ndarray):
-        """
-        Dummy classes for demonstration.
+```python
+class Dummy(ndarray):
+    """
+    Dummy classes for demonstration.
 
-        Attributes
-        ----------
-        attribute_1 : float
-            Set up your goal.
+    Attributes
+    ----------
+    attribute_1 : float
+        Set up your goal.
 
-        Methods
-        -------
-        method_1(c=2)
-            Runs a self-referential loop n times.
-        method_2(n=1.0)
-            Prints Nietzsche's n times.
-        """
-    ```
+    Methods
+    -------
+    method_1(c=2)
+        Runs a self-referential loop n times.
+    method_2(n=1.0)
+        Prints Nietzsche's n times.
+    """
+```
 
 
 ## The Holy Grail of Being Pythonic
@@ -952,6 +962,3 @@ Read more on divisional structure [here.](https://exploreflask.com/en/latest/blu
 * [Fate of reduce in python 3000](https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/)
 * [Difference between == and is operator in Python](https://www.geeksforgeeks.org/difference-operator-python/)
 * [Null in Python: Understanding Python's NoneType Object](https://realpython.com/null-in-python/)
-
-
-
