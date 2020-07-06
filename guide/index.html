@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pysanity | Pysanity</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="preload" href="/assets/css/0.styles.4a6b652e.css" as="style"><link rel="preload" href="/assets/js/app.680685b3.js" as="script"><link rel="preload" href="/assets/js/2.c37859ae.js" as="script"><link rel="preload" href="/assets/js/10.171fb59c.js" as="script"><link rel="prefetch" href="/assets/js/3.c65c2fcb.js"><link rel="prefetch" href="/assets/js/4.45587ab2.js"><link rel="prefetch" href="/assets/js/5.04b31612.js"><link rel="prefetch" href="/assets/js/6.51e4d4fc.js"><link rel="prefetch" href="/assets/js/7.43067d64.js"><link rel="prefetch" href="/assets/js/8.632adcb7.js"><link rel="prefetch" href="/assets/js/9.db7877cd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4a6b652e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Pysanity</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" aria-current="page" class="active sidebar-link">Pysanity</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/#auto-formatters" class="sidebar-link">Auto Formatters</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/#whitespaces" class="sidebar-link">Whitespaces</a></li><li class="sidebar-sub-header"><a href="/guide/#naming-conventions" class="sidebar-link">Naming Conventions</a></li></ul></li><li class="sidebar-sub-header"><a href="/guide/#coding-guideline" class="sidebar-link">Coding Guideline</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/#functions" class="sidebar-link">Functions</a></li><li class="sidebar-sub-header"><a href="/guide/#imports" class="sidebar-link">Imports</a></li><li class="sidebar-sub-header"><a href="/guide/#exception-handling" class="sidebar-link">Exception Handling</a></li><li class="sidebar-sub-header"><a href="/guide/#functional-paradigm" class="sidebar-link">Functional Paradigm</a></li><li class="sidebar-sub-header"><a href="/guide/#logging" class="sidebar-link">Logging</a></li><li class="sidebar-sub-header"><a href="/guide/#patterns" class="sidebar-link">Patterns</a></li><li class="sidebar-sub-header"><a href="/guide/#testing" class="sidebar-link">Testing</a></li><li class="sidebar-sub-header"><a href="/guide/#flask" class="sidebar-link">Flask</a></li></ul></li><li class="sidebar-sub-header"><a href="/guide/#documentation-guideline" class="sidebar-link">Documentation Guideline</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/#docstrings" class="sidebar-link">Docstrings</a></li></ul></li><li class="sidebar-sub-header"><a href="/guide/#the-holy-grail-of-being-pythonic" class="sidebar-link">The Holy Grail of Being Pythonic</a></li><li class="sidebar-sub-header"><a href="/guide/#references" class="sidebar-link">References</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="pysanity"><a href="#pysanity" class="header-anchor">#</a> Pysanity</h1> <h2 id="auto-formatters"><a href="#auto-formatters" class="header-anchor">#</a> Auto Formatters</h2> <ul><li><p>Use <a href="https://github.com/psf/black/" target="_blank" rel="noopener noreferrer">black<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> with default settings (max line length 88 characters).</p></li> <li><p>Use <a href="https://github.com/PyCQA/flake8" target="_blank" rel="noopener noreferrer">flake8<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to catch linting errors.</p></li> <li><p>Use <a href="https://github.com/timothycrosley/isort" target="_blank" rel="noopener noreferrer">isort<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to sort the imports.</p> <p>=&gt; However, be careful while sorting imports of application modules. It might accidentally add circular dependencies. For example in Flask applications, changing the import order in flask <code>app/package/__init__.py</code> can mess up the codebase.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Blueprint
+
+package <span class="token operator">=</span> Blueprint<span class="token punctuation">(</span><span class="token string">&quot;package&quot;</span><span class="token punctuation">,</span> __name__<span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+</code></pre></div><p>To avoid this, add <code># isort:skip</code> like this:</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> flask <span class="token keyword">import</span> Blueprint
+
+package <span class="token operator">=</span> Blueprint<span class="token punctuation">(</span><span class="token string">&quot;package&quot;</span><span class="token punctuation">,</span> __name__<span class="token punctuation">)</span>
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views <span class="token comment"># isort:skip</span>
+</code></pre></div><p>=&gt; Black is not compatible with isort. So it's better to run black after running isort.</p></li></ul> <h3 id="whitespaces"><a href="#whitespaces" class="header-anchor">#</a> Whitespaces</h3> <ul><li><p>Use soft tabs (space character) set to 4 spaces as per PEP8.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+∙∙<span class="token keyword">return</span> bar
+
+<span class="token comment"># bad</span>
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+∙<span class="token keyword">return</span> bar
+
+<span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+∙∙∙∙<span class="token keyword">return</span> bar
+</code></pre></div></li></ul> <h3 id="naming-conventions"><a href="#naming-conventions" class="header-anchor">#</a> Naming Conventions</h3> <ul><li><p>Use <em>snake_case</em> when naming <strong>variables</strong>, <strong>functions</strong>, and <strong>instances</strong>. Use it for <em>file names</em> too as they will be used in imports.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">import</span> myMod
+anOBJEct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+thisIsAnObject <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">def</span> <span class="token function">ThisisAFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">import</span> my_mod
+anobject <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+this_is_an_object <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">def</span> <span class="token function">this_is_a_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+</code></pre></div></li> <li><p><strong>Global constants</strong>, that are usually defined on a module level, should be named in all captital letters with underscores separating words.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+global_constant <span class="token operator">=</span> <span class="token number">50</span>
+
+<span class="token comment"># good</span>
+GLOBAL_CONSTANT <span class="token operator">=</span> <span class="token number">50</span>
+</code></pre></div></li> <li><p>Use PascalCase only when naming <strong>classes</strong>.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">class</span> <span class="token class-name">exampleDummyFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+fact <span class="token operator">=</span> exampleDummyFactory<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">class</span> <span class="token class-name">ExampleDummyFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+fact <span class="token operator">=</span> ExampleDummyFactory<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>Use underscores before private <strong>attributes</strong>, <strong>methods</strong>, <strong>variables</strong> and <strong>functions</strong>.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># private methods and attributes demo</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SomeThing</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;A class for demonstration.&quot;&quot;&quot;</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># private attribute</span>
+        self<span class="token punctuation">.</span>_private_att <span class="token operator">=</span> <span class="token number">10</span>
+
+    <span class="token keyword">def</span> <span class="token function">_private_method</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;This is a private method.&quot;&quot;&quot;</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token keyword">def</span> <span class="token function">method_x</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># using the private attribute</span>
+        res_private_att <span class="token operator">=</span> self<span class="token punctuation">.</span>_private_att
+        <span class="token comment"># calling the private method</span>
+        res_private_method <span class="token operator">=</span> self<span class="token punctuation">.</span>_private_method<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># private function demo</span>
+
+<span class="token keyword">def</span> <span class="token function">_private_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">def</span> <span class="token function">public_function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># calling the private function</span>
+    res_private_function <span class="token operator">=</span> _private_function<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>Avoid single letter names. Use descriptive and meaningful names - tell what the function does,
+or what data type an object is. Use <code>description_object</code> instead of <code>object_description</code>.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">def</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">analogy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token comment"># bad - no convention to know what data type it is</span>
+df_raw_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>raw_data<span class="token punctuation">)</span>
+id_dct_num <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span>
+
+<span class="token comment"># good - convention to tell data type by the last term</span>
+raw_data_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>raw_data<span class="token punctuation">)</span>
+id_num_dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span>
+
+<span class="token comment"># bad - meaningless names, lost context</span>
+LIST_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Jack&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Emily&quot;</span><span class="token punctuation">]</span>
+<span class="token comment"># ... many lines of code later</span>
+<span class="token keyword">for</span> item <span class="token keyword">in</span> LIST_1<span class="token punctuation">:</span>
+    add_person<span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+
+<span class="token comment"># good</span>
+NAME_LIST <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Jack&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Emily&quot;</span><span class="token punctuation">]</span>
+<span class="token comment"># ... many lines of code later</span>
+<span class="token keyword">for</span> name <span class="token keyword">in</span> NAME_LIST<span class="token punctuation">:</span>
+    add_person<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>Use singular or base words in naming; avoid using plural and instead append singular with the data type.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">def</span> <span class="token function">moves_object</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">move_object</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token comment"># bad - inconsistent naming for same data type and usage</span>
+teacher <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Michael&quot;</span><span class="token punctuation">]</span>
+students <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Jack&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Emily&quot;</span><span class="token punctuation">]</span>
+books <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;title&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;lorem&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ipsum&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> t <span class="token keyword">in</span> teacher<span class="token punctuation">:</span>
+    add_human<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> student <span class="token keyword">in</span> students<span class="token punctuation">:</span>
+    add_human<span class="token punctuation">(</span>student<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> book <span class="token keyword">in</span> books<span class="token punctuation">:</span>
+    add_item<span class="token punctuation">(</span>book<span class="token punctuation">)</span> <span class="token comment"># wrong; iterate column name instead of book</span>
+
+<span class="token comment"># good</span>
+teacher_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Michael&quot;</span><span class="token punctuation">]</span>
+student_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Jack&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Emily&quot;</span><span class="token punctuation">]</span>
+book_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&quot;title&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;lorem&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ipsum&quot;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> teacher <span class="token keyword">in</span> teacher_list<span class="token punctuation">:</span>
+    add_human<span class="token punctuation">(</span>teacher<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> student <span class="token keyword">in</span> student_list<span class="token punctuation">:</span>
+    add_human<span class="token punctuation">(</span>student<span class="token punctuation">)</span>
+
+<span class="token comment"># naming as df suggests it shall be treated as a dataframe</span>
+<span class="token keyword">for</span> idx<span class="token punctuation">,</span> book <span class="token keyword">in</span> book_df<span class="token punctuation">.</span>iterrow<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    add_item<span class="token punctuation">(</span>book<span class="token punctuation">)</span>
+</code></pre></div></li></ul> <h2 id="coding-guideline"><a href="#coding-guideline" class="header-anchor">#</a> Coding Guideline</h2> <h3 id="functions"><a href="#functions" class="header-anchor">#</a> Functions</h3> <ul><li><p>Avoid mutable data types as default function/method aruments.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">def</span> <span class="token function">make_list</span><span class="token punctuation">(</span>val<span class="token punctuation">,</span> lst<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> lst
+
+make_list<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># =&gt; [1]</span>
+make_list<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># =&gt; [1, 2], instead of the new init [2]</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">make_list</span><span class="token punctuation">(</span>val<span class="token punctuation">,</span> lst<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> lst <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        lst <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> lst
+
+init_list<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; [1]</span>
+
+init_list<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; [2]</span>
+</code></pre></div></li> <li><p>Robert C. Martin's <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank" rel="noopener noreferrer">single responsibility principle<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> encourages that a function should only have a single responsibility. That is, it should do one thing and one thing only. It massively improves refactorability.</p> <p>==&gt; There can be only one reason ever to change the function: if the way in which it does that thing must change.</p> <p>==&gt; It also becomes clear when a function can be deleted: if, when making changes elsewhere, it becomes clear the function's single responsibility is no longer needed, simply remove it.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token comment"># this function calculates multiple things and print them out at the same time</span>
+<span class="token comment"># ideally these two responsibilities can be split into two functions</span>
+
+<span class="token keyword">def</span> <span class="token function">calculate_and_print_stats</span><span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    total <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    mean <span class="token operator">=</span> statistics<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    median <span class="token operator">=</span> statistics<span class="token punctuation">.</span>median<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    mode <span class="token operator">=</span> statistics<span class="token punctuation">.</span>mode<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;-----------------Stats-----------------&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;SUM: </span><span class="token interpolation"><span class="token punctuation">{</span>total<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MEAN: </span><span class="token interpolation"><span class="token punctuation">{</span>mean<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MEDIAN: </span><span class="token interpolation"><span class="token punctuation">{</span>median<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MODE: </span><span class="token interpolation"><span class="token punctuation">{</span>mode<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># good</span>
+<span class="token comment"># these two functions do the same things but each of them</span>
+<span class="token comment"># only has a single responsibility</span>
+
+<span class="token keyword">def</span> <span class="token function">calculate_statistics</span><span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Calculates arithmatic sum, mean, median and mode.&quot;&quot;&quot;</span>
+
+    total <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    mean <span class="token operator">=</span> statistics<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    median <span class="token operator">=</span> statistics<span class="token punctuation">.</span>median<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+    mode <span class="token operator">=</span> statistics<span class="token punctuation">.</span>mode<span class="token punctuation">(</span>list_of_numbers<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> total<span class="token punctuation">,</span> mean<span class="token punctuation">,</span> median<span class="token punctuation">,</span> mode
+
+
+<span class="token keyword">def</span> <span class="token function">print_statistics</span><span class="token punctuation">(</span>total<span class="token punctuation">,</span> mean<span class="token punctuation">,</span> median<span class="token punctuation">,</span> mode<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Prints statistics on the console.&quot;&quot;&quot;</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;-----------------Stats-----------------&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;SUM: </span><span class="token interpolation"><span class="token punctuation">{</span>total<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MEAN: </span><span class="token interpolation"><span class="token punctuation">{</span>mean<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MEDIAN: </span><span class="token interpolation"><span class="token punctuation">{</span>median<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;MODE: </span><span class="token interpolation"><span class="token punctuation">{</span>mode<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>Strive to write <strong>pure</strong> or at least <strong>idempotent</strong> functions as much as possible.</p> <p>==&gt; <strong>An idempotent function</strong> always returns the same value given the same set of arguments, regardless of how many times it is called. The result does not depend on non-local variables, the mutability of arguments, or data from any I/O streams.</p> <p>The following function is idempotent. The result of <code>square_num(5)</code> is always going to return <code>25</code>, regardless of how many times it is called:</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">square_num</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;This is an idempotent function.&quot;&quot;&quot;</span>
+
+    <span class="token keyword">return</span> number <span class="token operator">**</span> <span class="token number">2</span>
+</code></pre></div><p>This function takes in user input and is not idempotent.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">square_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Return number_entered_by_user ** 2.&quot;&quot;&quot;</span>
+
+    number <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter a number: &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> number <span class="token operator">**</span> <span class="token number">2</span>
+</code></pre></div><p><strong>Why:</strong>
+Idempotent functions are easy to test because they are guaranteed to always return the same result when called with the same arguments. Testing is simply a matter of checking that the value returned by various different calls to the function return the expected value.</p> <p>==&gt; <strong>A function is considered pure</strong> if it is both idempotent and has no observable side effects. For example, if the idempotent version of square_func(number)above printed the result before returning it or mutated a variable outside of the function scope, it is still considered idempotent because while it accessed an I/O stream. However, it would not remain a pure function anymore.</p> <div class="language-python extra-class"><pre class="language-python"><code>a_variable <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">def</span> <span class="token function">square_num</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Idempotent but not pure.&quot;&quot;&quot;</span>
+
+    sq_num <span class="token operator">=</span> number <span class="token operator">**</span> <span class="token number">2</span>
+    a_variable <span class="token operator">+=</span> square_num
+
+    <span class="token keyword">return</span> sq_num
+</code></pre></div><p><strong>Why:</strong> Pure functions are even easier to test than idempotent functions. They don't keep any footprint outside of the function scope. Also, they don't call any non-pure functions. It's basically a data-in-data-out pipeline.</p></li></ul> <h3 id="imports"><a href="#imports" class="header-anchor">#</a> Imports</h3> <ul><li><p>Do not use wild card import</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">from</span> mod <span class="token keyword">import</span> <span class="token operator">*</span>
+<span class="token keyword">from</span> package<span class="token punctuation">.</span>mod <span class="token keyword">import</span> <span class="token operator">*</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">from</span> mod <span class="token keyword">import</span> func_0
+<span class="token keyword">from</span> package<span class="token punctuation">.</span>mod <span class="token keyword">import</span> func_1
+</code></pre></div></li> <li><p>Do not import unused modules (Flake8 will point out unused imports, make sure you remove them before committing).</p></li> <li><p>Sort the imports by import then from, and sort alphabetically (<code>isort</code> will automatically do this for you).</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">from</span> a_mod <span class="token keyword">import</span> foo
+<span class="token keyword">import</span> e_mod
+<span class="token keyword">import</span> b_mod
+<span class="token keyword">from</span> z_mod <span class="token keyword">import</span> bar<span class="token punctuation">,</span> baz
+
+<span class="token comment"># good</span>
+<span class="token keyword">import</span> b_mod
+<span class="token keyword">import</span> e_mod
+<span class="token keyword">from</span> a_mod <span class="token keyword">import</span> foo
+<span class="token keyword">from</span> z_mod <span class="token keyword">import</span> bar<span class="token punctuation">,</span> baz
+</code></pre></div></li> <li><p>Use absolute imports in your production code. Relative imports can be messy, particularly for shared projects where directory structure is likely to change. Consider this directory structure:</p> <div class="language-bash extra-class"><pre class="language-bash"><code>└── project
+└── package1
+   ├── module1.py
+   └── module2.py
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># package1/module1</span>
+
+<span class="token comment"># bad</span>
+<span class="token keyword">from</span> <span class="token punctuation">.</span>module2 <span class="token keyword">import</span> func
+
+<span class="token comment"># good</span>
+<span class="token keyword">from</span> package1<span class="token punctuation">.</span>module2 <span class="token keyword">import</span> func
+</code></pre></div></li></ul> <h3 id="exception-handling"><a href="#exception-handling" class="header-anchor">#</a> Exception Handling</h3> <ul><li><p>Do not write bare try-except block</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    do_something<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token comment"># bad</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    do_something<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre></div></li> <li><p>In most cases, the caught exception type must be as specific as possible. Something like KeyError, or ConnectionTimeout, etc.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># good</span>
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    do_something<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># catch some very specific exception - KeyError, ValueError, etc.</span>
+<span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre></div></li> <li><p>If some code path simply must broadly catch all exceptions - for example, the top-level loop for some long-running persistent process - then each such caught exception must write the full stack trace to a log or file, along with a timestamp. Not just the exception type and message, but the full stack trace.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">get_number</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">&quot;foo&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    x <span class="token operator">=</span> get_number<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+<span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+    logging<span class="token punctuation">.</span>exception<span class="token punctuation">(</span><span class="token string">&quot;Caught an error&quot;</span><span class="token punctuation">,</span> exec_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+</code></pre></div></li></ul> <h3 id="functional-paradigm"><a href="#functional-paradigm" class="header-anchor">#</a> Functional Paradigm</h3> <p>Some people claim that Python is, at least partly, a functional language. However, BFDL <a href="https://developers.slashdot.org/story/13/08/25/2115204/interviews-guido-van-rossum-answers-your-questions" target="_blank" rel="noopener noreferrer">disagrees<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. Python wasn't designed as a functional language and simply having a few map, filter type functions does not make it one.</p> <p>However, Python has in fact, functional capabilities. This is because functions are first class citizens here. They are expressions which can be evaluated at runtime. They can be passed as argument and you can return them from other functions. They can 'remember' things in closure.</p> <p>On top of that functional programming is also a way to think. Avoiding side effects and mutations for example are things you can probably always benefit from in some way if its not too strictly and mechanically enforced. Here are a few guidelines that will keep you from abusing the functional aspects of python.</p> <ul><li><p>Limit your usage of anonymized <code>lambda</code> functions to a minimum.</p> <p><strong>Why:</strong> When error occurs in <code>lambda</code> expression, Python does not provide the function name in the traceback. Also, they are harder to read when the expression gets complicated.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+div_zero <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">/</span> <span class="token number">0</span>
+div_zero<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre></div><p>The traceback in this case looks like this:</p> <div class="language-python extra-class"><pre class="language-python"><code>Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    File <span class="token string">&quot;&lt;stdin&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+    File <span class="token string">&quot;&lt;stdin&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span><span class="token keyword">lambda</span><span class="token operator">&gt;</span>
+ZeroDivisionError<span class="token punctuation">:</span> division by zero
+</code></pre></div></li> <li><p>Do not assign a lambda expression (flake8 will complain if do so). Define a normal function if the need arises.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+divider <span class="token operator">=</span> <span class="token keyword">lambda</span> some_list<span class="token punctuation">:</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> n<span class="token punctuation">:</span> n <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> some_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+divider<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; [0, 1, 1]</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">def</span> <span class="token function">divider</span><span class="token punctuation">(</span>some_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>x<span class="token operator">//</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> some_list<span class="token punctuation">]</span>
+
+divider<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; [0, 1, 1]</span>
+</code></pre></div></li> <li><p>Limit your usage of <code>map</code>, <code>filter</code>, <code>reduce</code>.</p> <p><strong>Why:</strong> In almost all cases, they can be replaced with <code>list comprehension</code> and built in functions.</p> <p>==&gt; <strong>Map Alternative:</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+customers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Frank&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Ann&quot;</span><span class="token punctuation">]</span>
+result <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> customers<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; ['A', 'B', 'F', 'A']</span>
+
+<span class="token comment"># good</span>
+customers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Frank&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Ann&quot;</span><span class="token punctuation">]</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> customers <span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; ['A', 'B', 'F', 'A']</span>
+</code></pre></div><p>==&gt; <strong>Filter Alternative:</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+customers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Frank&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Ann&quot;</span><span class="token punctuation">]</span>
+result <span class="token operator">=</span> <span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&quot;A&quot;</span><span class="token punctuation">,</span> customers<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; ['Alice', 'Ann']</span>
+
+<span class="token comment"># good</span>
+customers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Alice&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Bob&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Frank&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Ann&quot;</span><span class="token punctuation">]</span>
+result <span class="token operator">=</span> <span class="token punctuation">[</span> x <span class="token keyword">for</span> x <span class="token keyword">in</span> customers <span class="token keyword">if</span> x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">&quot;A&quot;</span> <span class="token punctuation">]</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; ['Alice', 'Ann']</span>
+</code></pre></div><p>==&gt; <strong>Reduce Alternative:</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> <span class="token builtin">reduce</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y<span class="token punctuation">:</span> x <span class="token operator">+</span> y<span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; 15</span>
+
+<span class="token comment"># good</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># &gt;&gt; 15</span>
+</code></pre></div></li></ul> <h3 id="logging"><a href="#logging" class="header-anchor">#</a> Logging</h3> <ul><li><p>Instantiate your logger in your package's <code>__init__.py</code> module. See how it's done in <code>requests</code> library <a href="https://github.com/kennethreitz/requests" target="_blank" rel="noopener noreferrer">here.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p>Define a basic logging class</p> <div class="language-python extra-class"><pre class="language-python"><code> <span class="token comment"># __init__.py</span>
+ <span class="token comment"># demo of a global logger that can be called and used anywhere in your package</span>
+
+ <span class="token keyword">import</span> logging
+
+ logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+ logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>
+     level<span class="token operator">=</span>logging<span class="token punctuation">.</span>INFO<span class="token punctuation">,</span>
+     <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">&quot;\n(asctime)s [%(levelname)s] %(message)s&quot;</span><span class="token punctuation">,</span>
+     handlers<span class="token operator">=</span><span class="token punctuation">[</span>logging<span class="token punctuation">.</span>FileHandler<span class="token punctuation">(</span><span class="token string">&quot;packg/debug.log&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> logging<span class="token punctuation">.</span>StreamHandler<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>Import and use it like this</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># mod.py</span>
+<span class="token comment"># using the logging class defined in __init__.py</span>
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> logging
+
+<span class="token keyword">def</span> <span class="token function">dumb_div</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> a <span class="token operator">//</span> <span class="token number">0</span>
+    <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+        res <span class="token operator">=</span> a <span class="token operator">//</span> <span class="token number">1</span>
+    <span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+        logging<span class="token punctuation">.</span>exception<span class="token punctuation">(</span><span class="token string">&quot;Exception Occured&quot;</span><span class="token punctuation">)</span>
+        res <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">return</span> res
+
+dumb_div<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>For logging in production applications, use <a href="https://docs.sentry.io/platforms/python/logging/" target="_blank" rel="noopener noreferrer">Sentry's Logging<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. You can view your logs in the Sentry Dashboard.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># __init__.py</span>
+
+<span class="token keyword">import</span> logging
+<span class="token keyword">import</span> sentry_sdk
+<span class="token keyword">from</span> sentry_sdk<span class="token punctuation">.</span>integrations<span class="token punctuation">.</span>logging <span class="token keyword">import</span> LoggingIntegration
+
+sentry_logging <span class="token operator">=</span> LoggingIntegration<span class="token punctuation">(</span>
+    level<span class="token operator">=</span>logging<span class="token punctuation">.</span>INFO<span class="token punctuation">,</span>  <span class="token comment"># Capture info and above as breadcrumbs</span>
+    event_level<span class="token operator">=</span>logging<span class="token punctuation">.</span>ERROR<span class="token punctuation">,</span>  <span class="token comment"># Send errors as events</span>
+<span class="token punctuation">)</span>
+sentry_sdk<span class="token punctuation">.</span>init<span class="token punctuation">(</span>
+    dsn<span class="token operator">=</span><span class="token string">&quot;&lt;sign-up-for-sentry-and-you-will-get-your-dsn&gt;&quot;</span><span class="token punctuation">,</span>
+    integrations<span class="token operator">=</span><span class="token punctuation">[</span>sentry_logging<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># mod.py</span>
+<span class="token comment"># using the sentry logging class defined in __init__.py</span>
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> logging
+
+<span class="token keyword">def</span> <span class="token function">dumb_div</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
+     <span class="token keyword">try</span><span class="token punctuation">:</span>
+         res <span class="token operator">=</span> a <span class="token operator">//</span> <span class="token number">0</span>
+     <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+         res <span class="token operator">=</span> a <span class="token operator">//</span> <span class="token number">1</span>
+     <span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+         logging<span class="token punctuation">.</span>exception<span class="token punctuation">(</span><span class="token string">&quot;Exception Occured&quot;</span><span class="token punctuation">)</span>
+         res <span class="token operator">=</span> <span class="token boolean">None</span>
+
+     <span class="token keyword">return</span> res
+
+ dumb_div<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>In some cases you will want to decouple exception handling and logger logics from your core logic. You can use Python's context manager decorator to achieve that.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> logging
+<span class="token keyword">from</span> contextlib <span class="token keyword">import</span> contextmanager
+
+<span class="token keyword">class</span> <span class="token class-name">Calculation</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Dummy class for demonstrating exception decoupling with contextmanager.&quot;&quot;&quot;</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>a <span class="token operator">=</span> a
+        self<span class="token punctuation">.</span>b <span class="token operator">=</span> b
+
+    <span class="token decorator annotation punctuation">@contextmanager</span>
+    <span class="token keyword">def</span> <span class="token function">errorhandler</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">yield</span>
+        <span class="token keyword">except</span> ZeroDivisionError<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>
+                <span class="token string-interpolation"><span class="token string">f&quot;Custom handling of Zero Division Error! Printing &quot;</span></span>
+                <span class="token string">&quot;only 2 levels of traceback..&quot;</span>
+            <span class="token punctuation">)</span>
+            logging<span class="token punctuation">.</span>exception<span class="token punctuation">(</span><span class="token string">&quot;ZeroDivisionError&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">main_func</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;Function that we want to save from nasty error handling logic.&quot;&quot;&quot;</span>
+
+        <span class="token keyword">with</span> self<span class="token punctuation">.</span>errorhandler<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>a <span class="token operator">/</span> self<span class="token punctuation">.</span>b
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># folder structure of the logging demo package
+packg
+├── debug.log
+├── __init__.py
+└── mod.py
+</code></pre></div></li></ul> <h3 id="patterns"><a href="#patterns" class="header-anchor">#</a> Patterns</h3> <h4 id="null-comparison"><a href="#null-comparison" class="header-anchor">#</a> Null Comparison</h4> <ul><li><p>As PEP8 suggests, comparisons to singletons like <code>None</code> should always be done with <code>is</code> or <code>is not</code>, never the equality (<code>=</code> / <code>!=</code>) operators.</p> <p><strong>Why:</strong> The <code>==</code> operator compares the values of both the operands and checks for value equality. Whereas <code>is</code> operator checks whether both the operands refer to the same object or not.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad</span>
+<span class="token keyword">if</span> val <span class="token operator">==</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token keyword">if</span> val <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+</code></pre></div><div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># good</span>
+<span class="token keyword">if</span> val <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+
+<span class="token keyword">if</span> val <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+</code></pre></div></li></ul> <h4 id="decorators"><a href="#decorators" class="header-anchor">#</a> Decorators</h4> <p>Instead of directly changing the source code, when possible, use <a href="https://realpython.com/primer-on-python-decorators/" target="_blank" rel="noopener noreferrer">decorators<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to change or monitor function/methods. Follow <a href="https://stackoverflow.com/a/39335652/8963300" target="_blank" rel="noopener noreferrer">this<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> style taken from David Beazly's <a href="https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/" target="_blank" rel="noopener noreferrer">Python Cookbook<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to write your decorators. This is a genaralized format that has the least amount of nesting and can be used with or without parameter.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> functools <span class="token keyword">import</span> partial<span class="token punctuation">,</span> wraps
+
+<span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>func<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> foo<span class="token operator">=</span><span class="token string">&quot;spam&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> func <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> partial<span class="token punctuation">(</span>decorator<span class="token punctuation">,</span> foo<span class="token operator">=</span>foo<span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># do something with `func` and `foo`, if you're so inclined</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token keyword">return</span> wrapper
+</code></pre></div><p>This can be used with or without parameters.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># applying decorator without any parameter</span>
+<span class="token decorator annotation punctuation">@decorator</span>
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token comment"># applying decorator with extra parameter</span>
+<span class="token decorator annotation punctuation">@decorator</span><span class="token punctuation">(</span>foo<span class="token operator">=</span><span class="token string">&quot;buzz&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre></div><p>Here is another example of a <code>retry</code> decorator that runs a callable multiple times in case it hits pre-specified exceptions.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> logging
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> partial<span class="token punctuation">,</span> wraps
+
+
+<span class="token keyword">def</span> <span class="token function">retry</span><span class="token punctuation">(</span>func<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> exception<span class="token operator">=</span>Exception<span class="token punctuation">,</span> n_tries<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> delay<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> backoff<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> logger<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Retry decorator with exponential backoff.
+
+    Parameters
+    ----------
+    func : typing.Callable, optional
+        Callable on which the decorator is applied, by default None
+    exception : Exception or tuple of Exceptions, optional
+        Exception(s) that invoke retry, by default Exception
+    n_tries : int, optional
+        Number of tries before giving up, by default 5
+    delay : int, optional
+        Initial delay between retries in seconds, by default 5
+    backoff : int, optional
+        Backoff multiplier e.g. value of 2 will double the delay, by default 1
+    logger : bool, optional
+        Option to log or print, by default False
+    Returns
+    -------
+    typing.Callable
+        Decorated callable that calls itself when exception(s) occur.
+    Examples
+    --------
+    &gt;&gt;&gt; import random
+    &gt;&gt;&gt; @retry(exception=Exception, n_tries=4)
+    ... def test_random(text):
+    ...    x = random.random()
+    ...    if x &lt; 0.5:
+    ...        raise Exception(&quot;Fail&quot;)
+    ...    else:
+    ...        print(&quot;Success: &quot;, text)
+    &gt;&gt;&gt; test_random(&quot;It works!&quot;)
+    &quot;&quot;&quot;</span>
+
+    <span class="token keyword">if</span> func <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> partial<span class="token punctuation">(</span>
+            retry<span class="token punctuation">,</span>
+            exception<span class="token operator">=</span>exception<span class="token punctuation">,</span>
+            n_tries<span class="token operator">=</span>n_tries<span class="token punctuation">,</span>
+            delay<span class="token operator">=</span>delay<span class="token punctuation">,</span>
+            backoff<span class="token operator">=</span>backoff<span class="token punctuation">,</span>
+            logger<span class="token operator">=</span>logger<span class="token punctuation">,</span>
+        <span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ntries<span class="token punctuation">,</span> ndelay <span class="token operator">=</span> n_tries<span class="token punctuation">,</span> delay
+
+        <span class="token keyword">while</span> ntries <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+            <span class="token keyword">except</span> exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                msg <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">, Retrying in </span><span class="token interpolation"><span class="token punctuation">{</span>ndelay<span class="token punctuation">}</span></span><span class="token string"> seconds...&quot;</span></span>
+                <span class="token keyword">if</span> logger<span class="token punctuation">:</span>
+                    logging<span class="token punctuation">.</span>warning<span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+                time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>ndelay<span class="token punctuation">)</span>
+                ntries <span class="token operator">-=</span> <span class="token number">1</span>
+                ndelay <span class="token operator">*=</span> backoff
+
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> wrapper
+</code></pre></div><h3 id="testing"><a href="#testing" class="header-anchor">#</a> Testing</h3> <ul><li><p>Use <a href="https://docs.pytest.org/en/latest/" target="_blank" rel="noopener noreferrer">pytest<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to write your tests</p></li> <li><p>Strive to write many small <a href="https://stackoverflow.com/a/47245930/8963300" target="_blank" rel="noopener noreferrer">pure<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> and <a href="https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation" target="_blank" rel="noopener noreferrer">idempotent<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> functions, and minimize where mutations occur.</p></li> <li><p>Whenever you fix a bug, write a regression test. A bug fixed without a regression test is almost certainly going to break again in the future.</p></li> <li><p>Use direct assertations and explicit comparisons; avoid negations.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># bad - other values can be falsy too: `[], 0, '', None`</span>
+<span class="token keyword">assert</span> <span class="token keyword">not</span> result
+<span class="token keyword">assert</span> result_list
+
+<span class="token comment"># good</span>
+<span class="token keyword">assert</span> result <span class="token operator">==</span> <span class="token boolean">False</span>
+<span class="token keyword">assert</span> <span class="token builtin">len</span><span class="token punctuation">(</span>result_list<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span>
+</code></pre></div></li></ul> <h3 id="flask"><a href="#flask" class="header-anchor">#</a> Flask</h3> <h4 id="project-structure"><a href="#project-structure" class="header-anchor">#</a> Project Structure</h4> <p>Try to follow <strong>divisional structure</strong> while designing your microservice APIs.
+Here's an example of divisional structure in a Flask project.</p> <div class="language- extra-class"><pre class="language-text"><code>yourapp/
+    __init__.py
+    admin/
+        __init__.py
+        views.py
+        static/
+        templates/
+    home/
+        __init__.py
+        views.py
+        static/
+        templates/
+    control_panel/
+        __init__.py
+        views.py
+        static/
+        templates/
+    models.py
+</code></pre></div><p>Read more on divisional structure <a href="https://exploreflask.com/en/latest/blueprints.html#divisional" target="_blank" rel="noopener noreferrer">here.<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="documentation-guideline"><a href="#documentation-guideline" class="header-anchor">#</a> Documentation Guideline</h2> <h3 id="docstrings"><a href="#docstrings" class="header-anchor">#</a> Docstrings</h3> <ul><li><p>Use <a href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard" target="_blank" rel="noopener noreferrer">numpy<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> style docstring. This is a good format that uses extra vertical space for maximum readability.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">dumb_add</span><span class="token punctuation">(</span>num0<span class="token punctuation">,</span> num1<span class="token punctuation">,</span> num2<span class="token punctuation">,</span> num3<span class="token punctuation">,</span> num4<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;[summary]
+
+    Parameters
+    ----------
+    num0 : [type]
+        [description]
+    num1 : [type]
+        [description]
+    num2 : [type]
+        [description]
+    num3 : [type]
+        [description]
+    num4 : [type]
+        [description]
+
+    Returns
+    -------
+    [type]
+        [description]
+    &quot;&quot;&quot;</span>
+</code></pre></div></li> <li><p>Examples should be given in REPL style</p> <div class="language-python extra-class"><pre class="language-python"><code>Examples
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> dumb_add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token number">15</span>
+
+Comment explaining the second example
+
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> dumb_add<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token number">40</span>
+</code></pre></div></li> <li><p>Single line docstring.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">dumb_sub</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num0<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;Subtracting num0 from num1.&quot;&quot;&quot;</span>
+</code></pre></div></li> <li><p>Inline comments should start with lowercase letter.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment"># going through the student list</span>
+<span class="token keyword">for</span> idx<span class="token punctuation">,</span> student <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>students_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div></li> <li><p>In case of documenting classes, you should mention the methods and attributes like this. The methods should be documented like the functions.</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">class</span> <span class="token class-name">Dummy</span><span class="token punctuation">(</span>ndarray<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    Dummy classes for demonstration.
+
+    Attributes
+    ----------
+    attribute_1 : float
+        Set up your goal.
+
+    Methods
+    -------
+    method_1(c=2)
+        Runs a self-referential loop n times.
+    method_2(n=1.0)
+        Prints Nietzsche's n times.
+    &quot;&quot;&quot;</span>
+</code></pre></div></li></ul> <h2 id="the-holy-grail-of-being-pythonic"><a href="#the-holy-grail-of-being-pythonic" class="header-anchor">#</a> The Holy Grail of Being Pythonic</h2> <ul><li><a href="https://access.redhat.com/blogs/766093/posts/2802001" target="_blank" rel="noopener noreferrer">Pythonic Code Review<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.oreilly.com/library/view/the-hitchhikers-guide/9781491933213/ch04.html" target="_blank" rel="noopener noreferrer">Writing Great Code<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://pep8.org/#overriding-principle" target="_blank" rel="noopener noreferrer">PEP 8 — the Style Guide for Python Code<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/wemake-services/wemake-python-styleguide" target="_blank" rel="noopener noreferrer">wemake-python-styleguide<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h2 id="references"><a href="#references" class="header-anchor">#</a> References</h2> <ol><li><a href="https://realpython.com/the-most-diabolical-python-antipattern/" target="_blank" rel="noopener noreferrer">The Most Diabolical Python Antipattern - Real Python<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://exploreflask.com/en/latest/blueprints.html#divisional" target="_blank" rel="noopener noreferrer">Flask Project Structure - Explore Flask<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://github.com/kengz/python" target="_blank" rel="noopener noreferrer">Python Style Guide -Kengz<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/" target="_blank" rel="noopener noreferrer">Django Style Guide<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://jeffknupp.com/blog/2018/10/11/write-better-python-functions/" target="_blank" rel="noopener noreferrer">Write Better Python Functions - Jeff Knupp<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://docs.python-guide.org/writing/style/" target="_blank" rel="noopener noreferrer">Code Style, Hitchhiker's Guide to Python - Kenneth Reitz<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://realpython.com/primer-on-python-decorators/" target="_blank" rel="noopener noreferrer">Primer on Python Decorators - Real Python<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.quora.com/Why-did-Guido-want-to-remove-map-filter-reduce-and-Lambda-from-Python-3" target="_blank" rel="noopener noreferrer">Why did Guido want to remove map(), filter(), reduce(), and Lambda from Python 3?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://blog.finxter.com/about-guidos-fate-of-reduce-in-python-3000/" target="_blank" rel="noopener noreferrer">Fate of reduce in python 3000<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.geeksforgeeks.org/difference-operator-python/" target="_blank" rel="noopener noreferrer">Difference between == and is operator in Python<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://realpython.com/null-in-python/" target="_blank" rel="noopener noreferrer">Null in Python: Understanding Python's NoneType Object<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol> <p>Build and Deploy / build-and-deploy
+failed 1 minute ago in 55s
+Search logs
+Set up job2s
+Build jenkey2011/vuepress-deploy@master15s
+Checkout0s
+vuepress-deploy38s
+/entrypoint.sh: cd: line 14: can't cd to blog/.vuepress/dist/: No such file or directory
+info &quot;fsevents@1.2.13&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@2.1.3: The platform &quot;linux&quot; is incompatible with this module.
+info &quot;fsevents@2.1.3&quot; is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 15.69s.
+yarn run v1.12.3
+$ vuepress build docs
+wait Extracting site metadata...
+tip Apply theme @vuepress/theme-default ...
+tip Apply plugin container (i.e. &quot;vuepress-plugin-container&quot;) ...
+tip Apply plugin @vuepress/last-updated (i.e. &quot;@vuepress/plugin-last-updated&quot;) ...
+tip Apply plugin @vuepress/register-components (i.e. &quot;@vuepress/plugin-register-components&quot;) ...
+tip Apply plugin @vuepress/active-header-links (i.e. &quot;@vuepress/plugin-active-header-links&quot;) ...
+tip Apply plugin @vuepress/search (i.e. &quot;@vuepress/plugin-search&quot;) ...
+tip Apply plugin @vuepress/nprogress (i.e. &quot;@vuepress/plugin-nprogress&quot;) ...
+tip Apply plugin @vuepress/back-to-top (i.e. &quot;@vuepress/plugin-back-to-top&quot;) ...
+tip Apply plugin @vuepress/medium-zoom (i.e. &quot;@vuepress/plugin-medium-zoom&quot;) ...
+[info] [webpackbar] Compiling Client
+[info] [webpackbar] Compiling Server
+[success] [webpackbar] Server: Compiled successfully in 8.75s
+[success] [webpackbar] Client: Compiled successfully in 13.23s
+wait Rendering static HTML...
+success Generated static files in docs/.vuepress/dist.</p> <p>Done in 15.35s.
+Build success
+==&gt; Changing directory to 'blog/.vuepress/dist/' ...
+/entrypoint.sh: cd: line 14: can't cd to blog/.vuepress/dist/: No such file or directory</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/6/2020, 1:13:09 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.680685b3.js" defer></script><script src="/assets/js/2.c37859ae.js" defer></script><script src="/assets/js/10.171fb59c.js" defer></script>
+  </body>
+</html>
