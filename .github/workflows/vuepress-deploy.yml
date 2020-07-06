@@ -1,17 +1,20 @@
 name: Build and Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - dev
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@master
 
-      - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: username/repo
-          TARGET_BRANCH: dev
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: blog/.vuepress/dist/
+    - name: Build and Deploy
+      uses: grasilife/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: dev # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: build # The folder the action should deploy.
+        BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
