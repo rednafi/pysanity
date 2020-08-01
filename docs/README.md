@@ -227,15 +227,15 @@ for idx, book in book_df.iterrow():
 
     **Why:**
 
-    ==> They hide the dependencies between the functions and classes and it is really hard to see how different parts of code are related to each other. This makes the usage, refactoring and testing hard, because you have no idea in what state the global variables should be in order to run the code successfully. This means you have to understand the whole code base in order to modify a single point of global variable usage. If your code base is changing actively, you are new in the project or is so big that it is hard to remember it completely this means you have to bublesort through all N previous functions and classes that use the global variable in order to write the function 'N+1'. This makes the usage of the global variables literally exponentially worse way to program compared to the usage of technique called dependency injection in large software projects.
+    * They hide the dependencies between the functions and classes and it is really hard to see how different parts of code are related to each other. This makes the usage, refactoring and testing hard, because you have no idea in what state the global variables should be in order to run the code successfully.
 
-    ==> If you run tests in parallel the tests mess up the global state.
+    * If you run tests in parallel the tests mess up the global state.
 
-    ==> If you debug a deep chain of functions, it is not easy to pick all the variables you have to monitor.
+    * If you debug a deep chain of functions, it is not easy to pick all the variables you have to monitor.
 
-    ==> They tend to waste developer time in the form of merge conflicts.
+    * They tend to waste developer time in the form of merge conflicts.
 
-    ==> They tend to put more workload to the persons responsible for the variables or manager classes and functions which manipulate these variables because of their central role and might cause mental breakdown if the work load is too high
+    * They tend to put more workload to the persons responsible for the variables or manager classes and functions which manipulate these variables because of their central role and might cause mental breakdown if the work load is too high
 
 ### Functions
 
