@@ -235,8 +235,6 @@ for idx, book in book_df.iterrow():
 
     * They tend to waste developer time in the form of merge conflicts.
 
-    * They tend to put more workload to the persons responsible for the variables or manager classes and functions which manipulate these variables because of their central role and might cause mental breakdown if the work load is too high
-
 ### Functions
 
 * Avoid mutable data types as default function/method arguments.
